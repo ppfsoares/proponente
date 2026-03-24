@@ -27,6 +27,7 @@ Todos os artefatos gerados estão concentrados no diretório `/docs`. Acesse os 
 
 - 🤖 **[Prompt de Prototipagem (Google Stitch)](./docs/prompt_stitch.md)**
   *Intruções prontas em prompt estruturado para uso em IA generativa de interfaces.*
+  https://stitch.withgoogle.com/u/1/projects/12045098472463027267?pli=1
 
 
 # Run and deploy your AI Studio app
