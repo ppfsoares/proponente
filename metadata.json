@@ -1,0 +1,5 @@
+{
+  "name": "Alerta Cultura",
+  "description": "Plataforma inteligente de monitoramento e notificação de editais culturais do Nordeste.",
+  "requestFramePermissions": ["geolocation"]
+}

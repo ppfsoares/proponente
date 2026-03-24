@@ -28,5 +28,24 @@ Todos os artefatos gerados estão concentrados no diretório `/docs`. Acesse os 
 - 🤖 **[Prompt de Prototipagem (Google Stitch)](./docs/prompt_stitch.md)**
   *Intruções prontas em prompt estruturado para uso em IA generativa de interfaces.*
 
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/ac286277-8837-427b-8fa4-14d1261ef22d
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
+
+
 ---
 *© 2024 Soma Inova - Alerta Cultura.*

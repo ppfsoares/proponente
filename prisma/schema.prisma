@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Profile {
+  id                String   @id @default(uuid())
+  userId            String   @unique
+  name              String
+  cnpj              String?
+  organizationSize  String   // Individual, Pequeno, Médio/Grande
+  state             String   // Nordeste states
+  areas             String[] // Música, Artes Cênicas, etc.
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Grant {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  value       Float?
+  deadline    DateTime
+  state       String
+  category    String
+  isUrgent    Boolean  @default(false)
+  externalUrl String?
+  createdAt   DateTime @default(now())
+}
+
+model Alert {
+  id             String   @id @default(uuid())
+  userId         String
+  minDeadline    Int?     // days
+  grantTypes     String[] // Lei Paulo Gustavo, etc.
+  channels       String[] // Email, WhatsApp, Push
+  createdAt      DateTime @default(now())
+}

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #b61424;
+  --color-primary-container: #ff7671;
+  --color-secondary: #006666;
+  --color-secondary-container: #8cf3f3;
+  --color-tertiary: #b70049;
+  --color-tertiary-container: #ff8fa4;
+  --color-surface: #f5f6f7;
+  --color-surface-container: #e6e8ea;
+  --color-surface-container-low: #eff1f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #2c2f30;
+  --color-on-surface-variant: #595c5d;
+  --color-outline: #757778;
+  --color-outline-variant: #abadae;
+  --color-error: #b41340;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #b61424 0%, #ff7671 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #b61424, #ff7671);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-effect {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
