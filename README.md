@@ -41,11 +41,24 @@ View your app in AI Studio: https://ai.studio/apps/ac286277-8837-427b-8fa4-14d12
 **Prerequisites:**  Node.js
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
+2. **Configurar variáveis de ambiente:**
+   Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis necessárias (`DATABASE_URL`, `SUPABASE_URL`, etc).
+3. **Configurar o Banco de Dados (Prisma):**
+   ```bash
+   # Gerar o cliente Prisma
+   npx prisma generate
+
+   # Sincronizar o schema com o banco de dados
+   npx prisma db push
+   ```
+4. **Executar o app:**
+   ```bash
+   npm run dev
+   ```
 
 
 ---

@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
@@ -66,8 +67,11 @@ async function startServer() {
 
       res.json(grants);
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: "Failed to fetch grants" });
+      console.error("Error fetching grants:", error);
+      res.status(500).json({ 
+        error: "Failed to fetch grants",
+        details: process.env.NODE_ENV !== "production" ? (error as Error).message : undefined
+      });
     }
   });
 
@@ -79,7 +83,11 @@ async function startServer() {
       if (!grant) return res.status(404).json({ error: "Grant not found" });
       res.json(grant);
     } catch (error) {
-      res.status(500).json({ error: "Failed to fetch grant" });
+      console.error(`Error fetching grant ${req.params.id}:`, error);
+      res.status(500).json({ 
+        error: "Failed to fetch grant",
+        details: process.env.NODE_ENV !== "production" ? (error as Error).message : undefined
+      });
     }
   });
 
@@ -92,7 +100,11 @@ async function startServer() {
       });
       res.json(profile);
     } catch (error) {
-      res.status(500).json({ error: "Failed to save profile" });
+      console.error("Error saving profile:", error);
+      res.status(500).json({ 
+        error: "Failed to save profile",
+        details: process.env.NODE_ENV !== "production" ? (error as Error).message : undefined
+      });
     }
   });
 

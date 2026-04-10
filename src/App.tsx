@@ -355,7 +355,11 @@ const OpportunitiesPage = () => {
         setGrants(data);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        toast.error('Erro ao carregar editais');
+        console.error(err);
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -454,7 +458,11 @@ const GrantDetailsPage = () => {
         setGrant(data);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        toast.error('Erro ao carregar detalhes do edital');
+        console.error(err);
+        setLoading(false);
+      });
   }, [id]);
 
   if (loading) return <div className="max-w-7xl mx-auto px-4 py-20 animate-pulse">Carregando...</div>;
@@ -554,6 +562,9 @@ const OnboardingPage = () => {
     if (res.ok) {
       toast.success('Perfil configurado com sucesso!');
       navigate('/alertas');
+    } else {
+      const errorData = await res.json();
+      toast.error(`Erro ao salvar perfil: ${errorData.details || errorData.error || 'Erro desconhecido'}`);
     }
   };
 
@@ -567,7 +578,7 @@ const OnboardingPage = () => {
         </div>
         <h2 className="text-3xl font-headline font-black">
           {step === 1 && "Quem é você na cultura?"}
-          {step === 2 && "Onde você atua?"}
+          {step === 2 && "Em qual estado você atua?"}
           {step === 3 && "Quais são seus interesses?"}
         </h2>
       </div>
@@ -749,7 +760,7 @@ const LoginPageWithAuth = () => {
     const { error } = await supabase.auth.signInWithOtp({ 
       email,
       options: {
-        emailRedirectTo: window.location.origin + '/cadastro'
+        emailRedirectTo: (import.meta.env.VITE_APP_URL || window.location.origin) + '/cadastro'
       }
     });
     if (error) {
