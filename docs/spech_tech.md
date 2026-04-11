@@ -15,15 +15,15 @@ Este documento detalha a arquitetura do ecossistema Soma Inova, priorizando a ro
 
 ## Stack Tecnológica
 
-### Frontend
+### Frontend e BFF (App e Site)
 - **Linguagem**: TypeScript
 - **Framework web**: Next.js
 - **Estilização**: Tailwind CSS
 
-### Backend
-- **Linguagem**: Python (Web Scraping/NLP) e Node.js (API)
-- **Runtime**: Node.js LTS / Python 3.11+
-- **Framework**: Express (Node) / Scrapy (Python)
+### Backend (Scrapper e sua API)
+- **Linguagem**: Python (Web Scraping/NLP) e framework rest com python
+- **Runtime**: Python 3.11+
+- **Framework**: FastAPI (Python)
 - **Persistência**: PostgreSQL (Dados estruturados)
 - **NoSQL**: MongoDB (Logs e documentos de editais)
 

@@ -25,26 +25,33 @@ Nossos Diferenciais:
 - **Motivações:** Sustentabilidade financeira da arte e democratização do acesso ao recurso público.
 - **Frustrações:** Perder prazos e não compreender por que não são elegíveis a certas vagas.
 
-### Gestor Governamental
+### Mentor / Captador de Recursos
+- **Problemas:** Falta de tempo para monitoramento de oportunidades para seus mentorados
+- **Objetivos:** Encontrar e criar checklists de documentos e briefings para seus mentorados
+- **Dados demográficos:** Produtores e mentores culturais, 18-65 anos, diversas linguagens artísticas.
+- **Motivações:** Sustentabilidade financeira da arte e democratização do acesso ao recurso público.
+- **Frustrações:** Perder prazos e não compreender por que não são elegíveis a certas vagas.
+
+### Gestor de Editais(governamental ou fundações)
 - **Problemas:** Baixa capilaridade dos editais e gestão ineficiente de inscritos.
 - **Objetivos:** Aumentar a diversidade de proponentes e automatizar processos de avaliação.
 - **Motivações:** Eficiência na aplicação de recursos públicos (Lei Rouanet, PNAB, etc.).
 
 ---
 
-## Principais Funcionalidades  (V1)
+## Principais Módulos  (V1)
 
-### RFN-01 - Indexador Automatizado
-- Motor em Python para captura de dados em Diários Oficiais e portais de fomento.
+### RFN-01 - Indexador Automatizado (Soma Index)
+- Motor em Python para captura de dados em Diários Oficiais e portais de fomento diversos.
 Critérios de Aceitação:
-- Deve identificar título, valor, prazo e público-alvo com alta precisão.
+- Deve identificar título, valor, prazo e público-alvo com alta precisão. Identificar outros campos interessantes
 
-### RFN-02 - Perfil e Alertas Personalizados
+### RFN-02 - Perfil e Alertas Personalizados (Soma Alerta)
 - Cadastro de perfil criativo e configuração de alertas via e-mail/dashboard.
 Critérios de Aceitação:
 - Usuário deve receber notificações apenas de editais que dão "match" com seu perfil.
 
-### RFN-03 - Tradutor de Editais (IA)
+### RFN-03 - Tradutor de Editais (IA) (Soma Assistente)
 - Resumo de editais complexos em linguagem simples (Quem pode? Quanto? Quando?).
 Critérios de Aceitação:
 - O resumo deve ter no máximo 3 frases e destacar impedimentos legais.

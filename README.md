@@ -1,53 +1,64 @@
-# Alerta Cultura
+# Soma Alerta
 
-O **Alerta Cultura** é uma plataforma inteligente e inclusiva de monitoramento e notificação personalizada de editais, desenhada para reduzir as barreiras de acesso ao fomento cultural e democratizar recursos contínuos para agentes culturais independentes e gestores públicos ou privados.
+[![Status do Projeto](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](#)
+[![Tecnologias](https://img.shields.io/badge/tech-Next.js%20%7C%20TypeScript%20%7C%20Supabase-blue)](#)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## Visão Geral
+O **Soma Alerta** é uma plataforma inteligente e inclusiva de monitoramento e notificação personalizada de editais, desenhada para reduzir as barreiras de acesso ao fomento cultural e democratizar recursos contínuos para agentes culturais independentes e gestores públicos ou privados.
 
-Este repositório consolida toda a base de documentação de ideação, design e engenharia do projeto. A documentação está organizada para facilitar a entrada de novos membros no ecossistema e atuar como única fonte de verdade para o desenvolvimento da plataforma.
+---
 
-## Índice de Documentação
+## 🚀 Visão Geral
 
-Todos os artefatos gerados estão concentrados no diretório `/docs`. Acesse os documentos através dos links abaixo:
+Este repositório consolida toda a base de documentação, design e engenharia do ecossistema Soma. A documentação atua como a **única fonte de verdade** para o desenvolvimento assistido por IA e colaboração humana.
 
-- 🎯 **[Declaração do Problema (Problem Statement)](./docs/problem_statement.md)**
-  *Contexto do problema de negócio, dores dos usuários e oportunidades do produto.*
+### 🍱 Ecossistema Soma
+- **Soma Alerta (App/BFF)**: Plataforma de monitoramento e notificações.
+- **Soma Index (Scraper)**: Motor de busca e indexação de editais em Diários Oficiais.
+- **Soma Assistente (IA)**: Tradutor de editais complexos em resumos simplificados.
 
-- 📋 **[Product Requirements Document (PRD)](./docs/prd.md)**
-  *Escopo das funcionalidades, matriz de usuários, métricas de sucesso e requisitos não-funcionais.*
+---
 
-- ⚙️ **[Especificação Técnica](./docs/spech_tech.md)**
-  *Visão técnica, decisões de stack (Next.js, Python, Tailwind), arquitetura e segurança.*
+## 📚 Índice de Documentação
 
-- 📱 **[Especificação de UI](./docs/spech_ui.md)**
-  *Relação de interfaces da aplicação (INT-01 à INT-06) e detalhamento do fluxo do usuário.*
+| Documento | Descrição |
+| :--- | :--- |
+| [🎯 **Problem Statement**](./docs/problem_statement.md) | Contexto de negócio, dores dos usuários e oportunidades. |
+| [📋 **PRD**](./docs/prd.md) | Requisitos funcionais, matriz de usuários e métricas. |
+| [⚙️ **Especificação Técnica**](./docs/spech_tech.md) | Stack (Next.js, Python), arquitetura e segurança. |
+| [📱 **Especificação de UI**](./docs/spech_ui.md) | Fluxos de usuário e detalhamento das interfaces. |
+| [🎨 **Design System**](./docs/design_system.md) | Tokens, tipografia, cores e acessibilidade. |
+| [🤖 **Prompt Stitch**](./docs/prompt_stitch.md) | Instruções para prototipagem generativa (Google Stitch). |
 
-- 🎨 **[Design System (Prisma Cultural)](./docs/design_system.md)**
-  *Diretrizes visuais puras (tokens, tipografia, cores e acessibilidade) e princípios de interface.*
+---
 
-- 🤖 **[Prompt de Prototipagem (Google Stitch)](./docs/prompt_stitch.md)**
-  *Intruções prontas em prompt estruturado para uso em IA generativa de interfaces.*
-  https://stitch.withgoogle.com/u/1/projects/12045098472463027267?pli=1
+## 🔗 Links do Projeto
 
+- **Protótipo Interativo (Stitch)**: [Visualizar no Stitch](https://stitch.withgoogle.com/u/1/projects/12045098472463027267?pli=1)
+- **AI Studio App**: [Acessar Instância](https://ai.studio/apps/ac286277-8837-427b-8fa4-14d1261ef22d)
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🛠️ Como Executar Localmente
 
-View your app in AI Studio: https://ai.studio/apps/ac286277-8837-427b-8fa4-14d1261ef22d
+### Pré-requisitos
+- Node.js (v22.17.0+ recomendado)
+- Docker & Docker Compose (para banco de dados local)
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
+### Passo a Passo
 
 1. **Instalar dependências:**
    ```bash
    npm install
    ```
-2. **Configurar variáveis de ambiente:**
-   Renomeie o arquivo `.env.example` para `.env` e preencha as variáveis necessárias (`DATABASE_URL`, `SUPABASE_URL`, etc).
-3. **Configurar o Banco de Dados (Prisma):**
+
+2. **Configuração de Ambiente:**
+   Renomeie o arquivo `.env.example` para `.env` e preencha as credenciais necessárias:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Banco de Dados (Prisma):**
    ```bash
    # Gerar o cliente Prisma
    npx prisma generate
@@ -55,11 +66,49 @@ View your app in AI Studio: https://ai.studio/apps/ac286277-8837-427b-8fa4-14d12
    # Sincronizar o schema com o banco de dados
    npx prisma db push
    ```
-4. **Executar o app:**
+
+4. **Executar em modo desenvolvimento:**
    ```bash
    npm run dev
    ```
 
+---
+
+## 📁 Estrutura do Projeto
+
+```text
+/
+├── apps/web/          # Aplicação principal NEXT.js (Frontend + BFF)
+├── docs/              # Documentação técnica e de produto (Fonte de Verdade)
+├── prisma/            # Schema e migrações do banco de dados
+├── src/               # Código fonte compartilhado e componentes
+├── .agent/            # Skills e configurações de IA (Antigravity)
+└── .github/           # CI/CD Workflows e templates
+```
 
 ---
-*© 2024 Soma Inova - Alerta Cultura.*
+
+## 🤖 Desenvolvimento Assistido por IA
+
+Este projeto foi desenvolvido com Antigravity com auxílio de roteiro de desenvolvimento [disponibilizado](https://github.com/valuedriven/devai/blob/main/.fluxo/fluxo_geral.md) durante pós-graduação em Engenharia de Software da PUC Minas
+
+### Diretrizes para Contribuições
+1. **Documentação Primeiro**: Consulte sempre `docs/` antes de gerar qualquer código.
+2. **Minimalismo**: Mantenha o escopo estritamente limitado ao definido no `prd.md`.
+3. **Padrões**: Priorize modularidade, baixo acoplamento e tipos TypeScript explícitos.
+4. **Validação**: Verifique alterações localmente com `npm run lint` antes de submeter.
+
+---
+
+## 🔐 Segurança e Testes
+
+- **Autenticação**: Gerenciada via **Supabase Auth**.
+- **Testes**:
+  ```bash
+  npm test              # Testes unitários
+  npm run test:e2e      # Testes de ponta a ponta
+  npm run test:coverage # Relatório de cobertura
+  ```
+
+---
+*© 2024 Soma Inova - Alerta Cultural.*
