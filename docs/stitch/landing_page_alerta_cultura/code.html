@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alerta Cultura - Monitoramento Inteligente Nordeste</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#004747",
+              "surface-dim": "#d1d5d7",
+              "on-primary-fixed-variant": "#60000b",
+              "surface-variant": "#dadddf",
+              "secondary-fixed-dim": "#7ee5e4",
+              "error-dim": "#a70138",
+              "primary-fixed": "#ff7671",
+              "primary-dim": "#a4001a",
+              "on-primary": "#ffefee",
+              "outline-variant": "#abadae",
+              "on-secondary-fixed-variant": "#006666",
+              "surface-container-high": "#e0e3e4",
+              "inverse-primary": "#ff5354",
+              "secondary-fixed": "#8cf3f3",
+              "outline": "#757778",
+              "tertiary-dim": "#a1003f",
+              "on-tertiary-container": "#670025",
+              "surface-tint": "#b61424",
+              "surface-bright": "#f5f6f7",
+              "on-secondary-container": "#005c5c",
+              "on-tertiary": "#ffefee",
+              "secondary-container": "#8cf3f3",
+              "on-tertiary-fixed-variant": "#77002d",
+              "on-error": "#ffefef",
+              "on-primary-fixed": "#000000",
+              "inverse-surface": "#0c0f10",
+              "error": "#b41340",
+              "tertiary": "#b70049",
+              "on-error-container": "#510017",
+              "tertiary-container": "#ff8fa4",
+              "surface": "#f5f6f7",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#eff1f2",
+              "secondary": "#006666",
+              "secondary-dim": "#005959",
+              "inverse-on-surface": "#9b9d9e",
+              "surface-container": "#e6e8ea",
+              "on-background": "#2c2f30",
+              "on-secondary": "#bbfffe",
+              "error-container": "#f74b6d",
+              "primary": "#b61424",
+              "on-surface": "#2c2f30",
+              "primary-container": "#ff7671",
+              "on-surface-variant": "#595c5d",
+              "tertiary-fixed-dim": "#ff7794",
+              "primary-fixed-dim": "#ff5a59",
+              "tertiary-fixed": "#ff8fa4",
+              "on-tertiary-fixed": "#390011",
+              "background": "#f5f6f7",
+              "surface-container-highest": "#dadddf",
+              "on-primary-container": "#4e0007"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #b61424, #ff7671);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .primary-gradient {
+            background: linear-gradient(to right, #b61424, #ff7671);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 no-border bg-surface-container-low">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF5D4E] to-[#ff7671] bg-clip-text text-transparent">Alerta Cultura</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-orange-600 dark:text-orange-400 font-bold border-b-2 border-orange-500 pb-1" href="#">Descobrir</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Alertas</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Oportunidades</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block px-6 py-2 rounded-full font-bold text-orange-600 border border-orange-200 hover:bg-orange-50 active:scale-95 duration-150">Entrar</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section with Prominent Search -->
+<section class="relative pt-12 pb-24 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold mb-6 tracking-wider uppercase">
+                        Monitoramento Regional Nordeste
+                    </span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-on-background leading-[1.1] mb-6">
+                        A cultura do <span class="text-gradient">Nordeste</span> em movimento.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                        Encontre editais, leis de incentivo e oportunidades culturais em todos os 9 estados da região. Otimize sua busca com inteligência artificial.
+                    </p>
+<!-- Quick Search Container -->
+<div class="bg-surface-container-lowest p-2 rounded-3xl shadow-2xl shadow-primary/5 max-w-2xl">
+<div class="flex flex-col md:flex-row gap-2">
+<div class="flex-1 flex items-center px-4 py-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-outline mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline" placeholder="Palavra-chave (ex: Teatro, Música)" type="text"/>
+</div>
+<div class="md:w-48 flex items-center px-4 py-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-outline mr-3">location_on</span>
+<select class="bg-transparent border-none focus:ring-0 w-full text-on-surface appearance-none">
+<option>Todos Estados</option>
+<option>Bahia</option>
+<option>Ceará</option>
+<option>Pernambuco</option>
+<option>Paraíba</option>
+</select>
+</div>
+<button class="primary-gradient text-white px-8 py-4 rounded-2xl font-bold hover:opacity-90 active:scale-95 transition-all">
+                                Buscar
+                            </button>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-6">
+<button class="primary-gradient text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+                            Cadastre-se Grátis
+                        </button>
+<button class="flex items-center gap-2 text-on-surface font-bold hover:text-primary transition-colors">
+                            Ver Editais Abertos
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="Vibrant Brazilian carnival dancers in colorful traditional costumes with intricate embroidery and feathers under bright tropical sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy0zDrmMnwqAnOeb3Yy8jjPmCnXr5NYAXcbqmDAynM_tZpCwAaXNNb6D5kfFqWBjhil5P24BUxJvmMTd3D-xOMJpmrSx8ucwI1eaR5XCgk5SbwFyiNW8nDTgzICO_TaJKa8LFdYyvRlyLsc7IFg7JlJ2cULzquQtzPr-_G_hJ7WUtzRNgH7anOzemKZqOzbFt0XbGKkP4zOdy8YKb1pBR4r-1080uVApkKj8f5oQDQq7FBgRIL18nfBAA3dAKhTAjZGkJxHWEsCSBz"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-3xl shadow-xl z-20 max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-weight="fill">psychology</span>
+</div>
+<span class="font-bold text-sm">Match IA</span>
+</div>
+<p class="text-xs text-on-surface-variant">3 novos editais encontrados para seu perfil em Pernambuco.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Bento Grid -->
+<section class="bg-surface-container-low py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-on-background mb-4">Foco Regional Estratégico</h2>
+<p class="text-on-surface-variant max-w-xl">Monitoramos em tempo real as principais fontes de fomento do Nordeste brasileiro.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Feature Card -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between relative overflow-hidden group">
+<div class="z-10">
+<div class="w-14 h-14 rounded-2xl primary-gradient flex items-center justify-center text-white mb-6">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<h3 class="text-2xl font-extrabold mb-4">Ecossistema Conectado</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8">Centralizamos editais municipais, estaduais e federais em uma única interface inteligente, garantindo que nenhum proponente perca prazos.</p>
+</div>
+<img class="absolute top-0 right-0 w-1/2 h-full object-cover opacity-10 group-hover:opacity-20 transition-opacity" data-alt="Stylized topographic map of Northeast Brazil with glowing orange data points representing cultural hubs and funding opportunities" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1PyFQ4suCo0YLE30GZGZ7GNmM-febwxkb5FOK0YuFg_G5NrDLE6X73z4N2oqU3a8S8Y3Ovo3jj3LrKa-gaNqNm9zzljKk5HBfWkBdoiyN0lB5IrzBQBtClUl7THpN6grFVbK8n0XDei9rsyuSZeXzjbZ1byDvfsOxeo4LpeWURc3PU_DXF6sTXPEMclJFBUB59psTxYjFzfVn-_EvpNfv0olRDtgLSxC_VoExtW7Su3soHENs6iGYtWX4LrZCPcSc29Q5AGmIzLf1"/>
+<div class="z-10 mt-auto">
+<span class="text-primary font-bold inline-flex items-center gap-2">Saiba mais <span class="material-symbols-outlined">trending_flat</span></span>
+</div>
+</div>
+<!-- Medium Cards -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-[2rem] flex items-center gap-6">
+<div class="flex-1">
+<h4 class="text-xl font-bold mb-2">9 Estados Cobertos</h4>
+<p class="text-sm text-on-surface-variant">Do Maranhão à Bahia, mapeamos todas as secretarias de cultura.</p>
+</div>
+<div class="w-24 h-24 rounded-2xl bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container">map</span>
+</div>
+</div>
+<div class="md:col-span-1 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">notifications_active</span>
+<div>
+<h4 class="font-bold mb-1">Alertas IA</h4>
+<p class="text-xs text-on-surface-variant">Notificações personalizadas via WhatsApp e e-mail.</p>
+</div>
+</div>
+<div class="md:col-span-1 primary-gradient p-8 rounded-[2rem] flex flex-col justify-between text-white">
+<span class="material-symbols-outlined text-4xl mb-4">groups</span>
+<div>
+<h4 class="font-bold mb-1">Comunidade</h4>
+<p class="text-xs text-white/80">Mais de 5.000 fazedores de cultura conectados.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Opportunities -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-4xl font-extrabold text-on-background mb-4">Editais em Destaque</h2>
+<p class="text-on-surface-variant">Oportunidades com inscrições abertas esta semana.</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-bold hover:underline">
+                        Ver todos os editais
+                        <span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all shadow-sm">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Atmospheric library interior with sunbeams highlighting dust particles and old books, representing cultural heritage and research" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4_ojke7GTNH15Hef3TKAmZBQVis7GfIaM4TTIBNG222EeQ0O0HX3q8S4JBiYGQRu5RbJotkVJpMOpW7XXEYWo40vADEoehPeC9ktomAkiRsSeICJOX9B505SwhXPfQ-MWhgarEO8hT4Q-8_G7Hfr7O_0lfXvh3EhsJ9DhYRPGctat5OSnNvwwfhkU8-BpSh5Oei01l0ELIoyKcm7MieeI8DRrkoY9gOpOlUY_q94Eov5-ClpVjNfYeUMjaoQZGU4Lat1Xfsq-JibA"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Urgente
+                            </div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Bahia</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-xs text-on-surface-variant">Audiovisual</span>
+</div>
+<h4 class="text-xl font-bold mb-4 line-clamp-2">Edital Paulo Gustavo: Fomento ao Cinema Independente</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-3">Apoio direto para produções de curta e longa metragem focadas na identidade soteropolitana.</p>
+<div class="flex justify-between items-center pt-6 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-outline uppercase font-bold">Inscrições até</p>
+<p class="text-sm font-bold text-error">24 de Outubro</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all shadow-sm">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Energetic concert stage with dynamic blue and purple lighting and silhouettes of a performing band" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxOgk97pmBtuXaLxS_AOe36MoEK8JsLvSgcRJhgBQOLiDAB52HQHgV4vzokGh7Pn0lt4d3cErEAunx7Sso_AQCtlwz7i_T_Iih8JDlQ3FJlAOFJFzHvy43rNTjWSoEnhg8e1tGJ9BqidU_YlV3I5wpucF-WKn0H6mrwOk5xN43Q-T_uIfzzZqpa8mgvMxbQQx9vXGyRssLVH0haGdZbGAnCAqKIAITk3ixbMeU3CYzJ9wzshE9FqUPfpg6PPhO6m1B_OoaWn_vJ2xG"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Ativo
+                            </div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Ceará</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-xs text-on-surface-variant">Música</span>
+</div>
+<h4 class="text-xl font-bold mb-4 line-clamp-2">Festival Música do Sol: Seleção de Novos Talentos</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-3">Chamada aberta para bandas e artistas solo residentes no Ceará para a programação oficial 2024.</p>
+<div class="flex justify-between items-center pt-6 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-outline uppercase font-bold">Inscrições até</p>
+<p class="text-sm font-bold text-on-surface">15 de Novembro</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all shadow-sm">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract art studio with vibrant paint splatters, canvases, and creative tools in a sunlit loft space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAN_ifu1cplscU9gOpdOCqTKeQTlXUVrk9PmOYzCIepyYL73uZXU5nCmmjGP6DkPef34icn84V_1-v_Jao9bplXOP2La38bqK-mlgXBk3WzX2Eg21EHYWDlx7bZKAKoa0tq4sUUmqXWfGDy_Ihnxk3pJYdlF-5Gww4-CHxhDxGOO_kBkJiIEe_K-qvbjywo4HvjFeX9uxXt2mp-6dddUmZqE7XSCbDTvmbj20pLqokW-lJC31pwZZ9EPyQCDHQ0qJC9wbU39ascQa2"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                                Ativo
+                            </div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">Pernambuco</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-xs text-on-surface-variant">Artes Visuais</span>
+</div>
+<h4 class="text-xl font-bold mb-4 line-clamp-2">Exposição Itinerante: Cores do Sertão</h4>
+<p class="text-sm text-on-surface-variant mb-6 line-clamp-3">Seleção de fotógrafos e pintores para exposição que percorrerá 10 cidades do interior.</p>
+<div class="flex justify-between items-center pt-6 border-t border-surface-container">
+<div>
+<p class="text-[10px] text-outline uppercase font-bold">Inscrições até</p>
+<p class="text-sm font-bold text-on-surface">02 de Dezembro</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-bold text-slate-900 dark:text-white text-lg">Alerta Cultura</span>
+<p class="text-sm text-slate-500 font-body">© 2024 Alerta Cultura - Monitoramento Inteligente Nordeste</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Termos</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Privacidade</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Contato</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Sobre</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-orange-100 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-orange-100 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] z-50 rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 rounded-2xl px-5 py-2 scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold Plus Jakarta Sans">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold Plus Jakarta Sans">Alertas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500" href="#">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold Plus Jakarta Sans">Match IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold Plus Jakarta Sans">Perfil</span>
+</a>
+</nav>
+</body></html>

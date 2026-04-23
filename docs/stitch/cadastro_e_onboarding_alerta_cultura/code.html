@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cadastro de Perfil - Alerta Cultura</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#004747",
+              "surface-dim": "#d1d5d7",
+              "on-primary-fixed-variant": "#60000b",
+              "surface-variant": "#dadddf",
+              "secondary-fixed-dim": "#7ee5e4",
+              "error-dim": "#a70138",
+              "primary-fixed": "#ff7671",
+              "primary-dim": "#a4001a",
+              "on-primary": "#ffefee",
+              "outline-variant": "#abadae",
+              "on-secondary-fixed-variant": "#006666",
+              "surface-container-high": "#e0e3e4",
+              "inverse-primary": "#ff5354",
+              "secondary-fixed": "#8cf3f3",
+              "outline": "#757778",
+              "tertiary-dim": "#a1003f",
+              "on-tertiary-container": "#670025",
+              "surface-tint": "#b61424",
+              "surface-bright": "#f5f6f7",
+              "on-secondary-container": "#005c5c",
+              "on-tertiary": "#ffeff0",
+              "secondary-container": "#8cf3f3",
+              "on-tertiary-fixed-variant": "#77002d",
+              "on-error": "#ffefef",
+              "on-primary-fixed": "#000000",
+              "inverse-surface": "#0c0f10",
+              "error": "#b41340",
+              "tertiary": "#b70049",
+              "on-error-container": "#510017",
+              "tertiary-container": "#ff8fa4",
+              "surface": "#f5f6f7",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#eff1f2",
+              "secondary": "#006666",
+              "secondary-dim": "#005959",
+              "inverse-on-surface": "#9b9d9e",
+              "surface-container": "#e6e8ea",
+              "on-background": "#2c2f30",
+              "on-surface": "#2c2f30",
+              "primary": "#b61424",
+              "on-surface-variant": "#595c5d",
+              "tertiary-fixed-dim": "#ff7794",
+              "primary-fixed-dim": "#ff5a59",
+              "tertiary-fixed": "#ff8fa4",
+              "on-tertiary-fixed": "#390011",
+              "background": "#f5f6f7",
+              "surface-container-highest": "#dadddf",
+              "on-primary-container": "#4e0007"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background min-h-screen flex flex-col">
+<header class="bg-white/80 backdrop-blur-xl sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF5D4E] to-[#ff7671] bg-clip-text text-transparent">Alerta Cultura</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 font-medium hover:text-orange-500 transition-all duration-300" href="#">Descobrir</a>
+<a class="text-slate-600 font-medium hover:text-orange-500 transition-all duration-300" href="#">Alertas</a>
+<a class="text-slate-600 font-medium hover:text-orange-500 transition-all duration-300" href="#">Oportunidades</a>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-90 transition-all">Entrar</button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center p-4 md:p-8 bg-surface-container-low">
+<div class="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-4 space-y-6">
+<div class="space-y-2">
+<h1 class="text-4xl font-extrabold text-on-surface leading-tight">Crie seu perfil cultural</h1>
+<p class="text-on-surface-variant body-md">Personalize sua experiência para receber alertas de editais que realmente importam para você.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Identificação</span>
+<span class="text-xs text-on-surface-variant">Dados básicos e porte</span>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant/30 ml-5"></div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">2</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface-variant">Atuação</span>
+<span class="text-xs text-on-surface-variant">Áreas e localização</span>
+</div>
+</div>
+<div class="w-px h-8 bg-outline-variant/30 ml-5"></div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold">3</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface-variant">Interesses</span>
+<span class="text-xs text-on-surface-variant">Público e match IA</span>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-secondary-container/30 border border-secondary-fixed/20 hidden lg:block">
+<div class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<p class="text-sm text-on-secondary-container leading-relaxed">
+<strong>Dica do Curador:</strong> Preencher todos os campos aumenta em 85% a precisão do nosso sistema de Match IA.
+                        </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-3xl p-8 shadow-sm border border-outline-variant/10">
+<div class="mb-10">
+<div class="flex justify-between items-end mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Passo 1 de 3</span>
+<span class="text-sm font-medium text-on-surface-variant">33% concluído</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-1/3 rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<form class="space-y-8">
+<section class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Nome ou Razão Social</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline" placeholder="Ex: Cia de Teatro Arte Viva" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">CNPJ (Opcional)</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline" placeholder="00.000.000/0000-00" type="text"/>
+</div>
+</div>
+<div class="space-y-4">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Porte da Organização / Agente</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="relative flex items-center p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group">
+<input class="hidden peer" name="porte" type="radio"/>
+<div class="peer-checked:border-primary peer-checked:bg-white absolute inset-0 border-2 border-transparent rounded-xl pointer-events-none transition-all"></div>
+<div class="relative z-10 flex flex-col">
+<span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Individual</span>
+<span class="text-xs text-on-surface-variant">MEI / Autônomo</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group">
+<input class="hidden peer" name="porte" type="radio"/>
+<div class="peer-checked:border-primary peer-checked:bg-white absolute inset-0 border-2 border-transparent rounded-xl pointer-events-none transition-all"></div>
+<div class="relative z-10 flex flex-col">
+<span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Pequeno</span>
+<span class="text-xs text-on-surface-variant">Até 10 pessoas</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container transition-all group">
+<input class="hidden peer" name="porte" type="radio"/>
+<div class="peer-checked:border-primary peer-checked:bg-white absolute inset-0 border-2 border-transparent rounded-xl pointer-events-none transition-all"></div>
+<div class="relative z-10 flex flex-col">
+<span class="text-sm font-bold text-on-surface group-hover:text-primary transition-colors">Médio/Grande</span>
+<span class="text-xs text-on-surface-variant">Mais de 10 pessoas</span>
+</div>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Localização Principal (Nordeste)</label>
+<select class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all appearance-none">
+<option disabled="" selected="" value="">Selecione seu estado</option>
+<option>Alagoas</option>
+<option>Bahia</option>
+<option>Ceará</option>
+<option>Maranhão</option>
+<option>Paraíba</option>
+<option>Pernambuco</option>
+<option>Piauí</option>
+<option>Rio Grande do Norte</option>
+<option>Sergipe</option>
+</select>
+</div>
+<div class="space-y-4 pt-4">
+<label class="text-sm font-bold text-on-surface-variant ml-1">Áreas Culturais de Atuação</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Música</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Artes Cênicas</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Audiovisual</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Artesanato</button>
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/10 text-primary text-sm font-bold transition-all" type="button">Patrimônio Cultural</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Literatura</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">Gastronomia</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant/30 text-sm font-medium hover:border-primary hover:text-primary transition-all bg-white" type="button">+ Outros</button>
+</div>
+</div>
+</section>
+<div class="flex items-center justify-between pt-8 border-t border-outline-variant/10">
+<button class="px-8 py-3 text-on-surface-variant font-bold hover:text-on-surface transition-colors" type="button">Pular por enquanto</button>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-3 rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2" type="submit">
+                                Próximo
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="bg-slate-50 border-t border-slate-200">
+<div class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-bold text-slate-900">Alerta Cultura</span>
+<p class="text-sm text-slate-500">© 2024 Alerta Cultura - Monitoramento Inteligente Nordeste</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600" href="#">Termos</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600" href="#">Privacidade</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600" href="#">Contato</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600" href="#">Sobre</a>
+</div>
+</div>
+</footer>
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-2xl flex justify-around items-center px-4 pb-6 pt-3 z-50 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] border-t border-slate-100">
+<div class="flex flex-col items-center justify-center bg-orange-100 text-orange-700 rounded-2xl px-5 py-2 scale-90">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold">Alertas</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold">Match IA</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Perfil</span>
+</div>
+</nav>
+</body></html>

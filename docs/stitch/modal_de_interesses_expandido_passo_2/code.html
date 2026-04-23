@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interesses - Prisma Cultural</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#77002d",
+              "tertiary-dim": "#a1003f",
+              "surface": "#f5f6f7",
+              "secondary-dim": "#005959",
+              "tertiary": "#b70049",
+              "surface-bright": "#f5f6f7",
+              "secondary": "#006666",
+              "on-secondary": "#bbfffe",
+              "primary-dim": "#a4001a",
+              "inverse-on-surface": "#9b9d9e",
+              "surface-dim": "#d1d5d7",
+              "on-error-container": "#510017",
+              "on-secondary-fixed": "#004747",
+              "error-container": "#f74b6d",
+              "on-tertiary": "#ffeff0",
+              "secondary-container": "#8cf3f3",
+              "outline-variant": "#abadae",
+              "on-primary": "#ffefee",
+              "on-primary-fixed": "#000000",
+              "secondary-fixed-dim": "#7ee5e4",
+              "surface-variant": "#dadddf",
+              "on-primary-fixed-variant": "#60000b",
+              "on-secondary-container": "#005c5c",
+              "error": "#b41340",
+              "primary": "#b61424",
+              "surface-container-high": "#e0e3e4",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#595c5d",
+              "tertiary-fixed-dim": "#ff7794",
+              "on-background": "#2c2f30",
+              "secondary-fixed": "#8cf3f3",
+              "inverse-primary": "#ff5354",
+              "primary-fixed": "#ff7671",
+              "primary-fixed-dim": "#ff5a59",
+              "inverse-surface": "#0c0f10",
+              "error-dim": "#a70138",
+              "on-secondary-fixed-variant": "#006666",
+              "outline": "#757778",
+              "tertiary-fixed": "#ff8fa4",
+              "on-tertiary-container": "#670025",
+              "surface-tint": "#b61424",
+              "surface-container": "#e6e8ea",
+              "on-tertiary-fixed": "#390011",
+              "primary-container": "#ff7671",
+              "on-surface": "#2c2f30",
+              "on-error": "#ffefef",
+              "surface-container-highest": "#dadddf",
+              "on-primary-container": "#4e0007",
+              "tertiary-container": "#ff8fa4",
+              "surface-container-low": "#eff1f2",
+              "background": "#f5f6f7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(24px);
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      /* Custom scrollbar for the modal content */
+      .modal-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      .modal-scroll::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .modal-scroll::-webkit-scrollbar-thumb {
+        background: #e6e8ea;
+        border-radius: 10px;
+      }
+      .modal-scroll::-webkit-scrollbar-thumb:hover {
+        background: #dadddf;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Background: Plans and Pricing Screen (Blurred) -->
+<div class="fixed inset-0 z-0 flex flex-col blur-md grayscale-[0.2]">
+<!-- TopAppBar Placeholder -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(44,47,48,0.04)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-[1440px] mx-auto">
+<span class="text-2xl font-black bg-gradient-to-r from-[#b61424] to-[#ff7671] bg-clip-text text-transparent font-headline">Prisma Cultural</span>
+<div class="hidden md:flex gap-8 text-zinc-500 font-headline font-bold">
+<span>Discover</span>
+<span>Grants</span>
+<span>Archive</span>
+<span>About</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-500">search</span>
+<span class="material-symbols-outlined text-zinc-500">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-32 px-8 flex-1 max-w-[1440px] mx-auto w-full">
+<div class="text-center mb-16">
+<h1 class="text-5xl font-headline font-extrabold tracking-tight mb-4">Planos e Preços</h1>
+<p class="text-zinc-500 text-lg">Escolha o plano ideal para sua jornada cultural.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pricing Card Mockups -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="h-8 w-24 bg-surface-container-high rounded-full mb-6"></div>
+<div class="h-12 w-32 bg-surface-container-high rounded mb-4"></div>
+<div class="space-y-4">
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+<div class="h-4 w-4/5 bg-surface-container-low rounded"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-lg border-2 border-primary/20">
+<div class="h-8 w-24 bg-primary/10 rounded-full mb-6"></div>
+<div class="h-12 w-32 bg-surface-container-high rounded mb-4"></div>
+<div class="space-y-4">
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+<div class="h-4 w-4/5 bg-surface-container-low rounded"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="h-8 w-24 bg-surface-container-high rounded-full mb-6"></div>
+<div class="h-12 w-32 bg-surface-container-high rounded mb-4"></div>
+<div class="space-y-4">
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+<div class="h-4 w-4/5 bg-surface-container-low rounded"></div>
+<div class="h-4 w-full bg-surface-container-low rounded"></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-zinc-950/40 backdrop-blur-[2px]">
+<!-- Survey Modal -->
+<div class="bg-surface-container-lowest w-full max-w-3xl rounded-xl shadow-[0_24px_64px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col md:flex-row max-h-[90vh]">
+<!-- Left Side: Visual/Progress -->
+<div class="md:w-1/4 bg-surface-container-low p-8 flex flex-col justify-between border-r border-outline-variant/10">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold tracking-widest uppercase mb-6">
+                        Passo Final
+                    </div>
+<h3 class="font-headline font-extrabold text-2xl text-on-surface leading-tight mb-4">Quase lá!</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Personalize sua experiência para receber os editais que mais importam para você.</p>
+</div>
+<div class="hidden md:block">
+<div class="relative w-full h-32 rounded-lg overflow-hidden mb-4">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Modern bright artist studio with canvases leaning against white walls and soft natural light from large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRjESLHrU7VhDOePdauG3gVfcBCDiZIY1r9w5ErCSbXswN66W0u8jqZDefDXlIolNgaq8pqtKg6Y7uthnU0uGrTORkXQOecPZez2OXkT-zHlsPp5PLvmnPlbrlITh14Tibnj4kC5q1Ma5hl_SYjRWXBY044STSv0-EBd1IwT4KpChrcB5QnNXQFr57Xr9ruJsGClXLkRFzijWWD0J-nDaQ-sKxlRQFpt0H7lof0dm1LUnDc2nmVJjhI8QZiSGYphEKX7vKBq8XS2Tm"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary w-full h-full"></div>
+</div>
+</div>
+</div>
+<!-- Right Side: Content -->
+<div class="md:w-3/4 p-8 md:p-10 overflow-y-auto modal-scroll">
+<div class="mb-8">
+<h2 class="font-headline font-extrabold text-2xl text-on-surface mb-2">Nos conte um pouco sobre seus interesses</h2>
+<p class="text-on-surface-variant">Sua opinião ajuda a moldar o Alerta Cultura.</p>
+</div>
+<form class="space-y-8">
+<!-- Question 1: Area of Activity -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface">Qual sua principal área de atuação?</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">theater_comedy</span> Artes Cênicas
+                            </button>
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">music_note</span> Música
+                            </button>
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">palette</span> Artes Visuais
+                            </button>
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">movie</span> Audiovisual
+                            </button>
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">menu_book</span> Literatura
+                            </button>
+<button class="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low text-xs font-semibold hover:bg-surface-variant transition-all border border-transparent focus:border-primary text-left" type="button">
+<span class="material-symbols-outlined text-primary scale-90">more_horiz</span> Outros
+                            </button>
+</div>
+</div>
+<!-- Profiles Section (Mentors & Publishers) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-2xl bg-primary/5 border border-primary/10">
+<!-- Mentor Profile -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">supervisor_account</span> Perfil: Mentoria
+                                </label>
+<p class="text-xs text-on-surface-variant mb-2 leading-relaxed">Qual o tamanho da carteira de projetos que você gerencia?</p>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="mentor_portfolio" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">1 - 5 projetos</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="mentor_portfolio" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">6 - 15 projetos</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="mentor_portfolio" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">15+ projetos</span>
+</label>
+</div>
+</div>
+<!-- Publisher Profile -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">corporate_fare</span> Perfil: Publicador
+                                </label>
+<p class="text-xs text-on-surface-variant mb-2 leading-relaxed">Qual o volume anual médio de recursos disponibilizados?</p>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="publisher_volume" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">Até R$ 100k</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="publisher_volume" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">R$ 100k - R$ 1M</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-white transition-colors border border-outline-variant/20">
+<input class="w-4 h-4 text-primary border-outline-variant focus:ring-primary" name="publisher_volume" type="radio"/>
+<span class="text-xs font-medium text-on-surface-variant">Acima de R$ 1M</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Common Difficulty -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface">Qual sua maior dificuldade hoje?</label>
+<div class="space-y-2">
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary" name="difficulty" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Encontrar editais abertos</span>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary" name="difficulty" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Escrever o projeto cultural</span>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-variant transition-colors group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-primary" name="difficulty" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Entender a burocracia das leis</span>
+</label>
+</div>
+</div>
+<!-- Frequency -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface">Com que frequência você busca editais?</label>
+<select class="w-full p-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary font-medium text-on-surface-variant appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23595c5d%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_1rem_center] bg-no-repeat">
+<option>Diariamente</option>
+<option>Semanalmente</option>
+<option>Mensalmente</option>
+<option>Apenas quando preciso de verba</option>
+</select>
+</div>
+<!-- Open Text Field -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface">Comentários adicionais</label>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary font-medium text-on-surface-variant resize-none" placeholder="Algo que gostaria de nos contar?" rows="3"></textarea>
+</div>
+<!-- Action Button -->
+<div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+<button class="w-full sm:w-auto flex-1 py-4 px-8 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-extrabold rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all" type="submit">
+                            Finalizar Registro
+                        </button>
+<button class="w-full sm:w-auto px-8 py-4 text-primary font-headline font-bold hover:bg-surface-container-low rounded-full transition-colors" type="button">
+                            Pular por agora
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Footer Mockup (Blurred) -->
+<footer class="fixed bottom-0 w-full z-0 bg-zinc-50 border-t border-zinc-200/20 blur-md grayscale">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 w-full max-w-[1440px] mx-auto">
+<span class="font-headline font-bold text-zinc-900">Prisma Cultural</span>
+<span class="font-body text-sm tracking-wide text-zinc-600">© 2024 Prisma Cultural. Curation through clarity.</span>
+</div>
+</footer>
+</body></html>

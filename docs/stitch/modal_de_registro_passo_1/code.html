@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#77002d",
+              "tertiary-dim": "#a1003f",
+              "surface": "#f5f6f7",
+              "secondary-dim": "#005959",
+              "tertiary": "#b70049",
+              "surface-bright": "#f5f6f7",
+              "secondary": "#006666",
+              "on-secondary": "#bbfffe",
+              "primary-dim": "#a4001a",
+              "inverse-on-surface": "#9b9d9e",
+              "surface-dim": "#d1d5d7",
+              "on-error-container": "#510017",
+              "on-secondary-fixed": "#004747",
+              "error-container": "#f74b6d",
+              "on-tertiary": "#ffeff0",
+              "secondary-container": "#8cf3f3",
+              "outline-variant": "#abadae",
+              "on-primary": "#ffefee",
+              "on-primary-fixed": "#000000",
+              "secondary-fixed-dim": "#7ee5e4",
+              "surface-variant": "#dadddf",
+              "on-primary-fixed-variant": "#60000b",
+              "on-secondary-container": "#005c5c",
+              "error": "#b41340",
+              "primary": "#b61424",
+              "surface-container-high": "#e0e3e4",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#595c5d",
+              "tertiary-fixed-dim": "#ff7794",
+              "on-background": "#2c2f30",
+              "secondary-fixed": "#8cf3f3",
+              "inverse-primary": "#ff5354",
+              "primary-fixed": "#ff7671",
+              "primary-fixed-dim": "#ff5a59",
+              "inverse-surface": "#0c0f10",
+              "error-dim": "#a70138",
+              "on-secondary-fixed-variant": "#006666",
+              "outline": "#757778",
+              "tertiary-fixed": "#ff8fa4",
+              "on-tertiary-container": "#670025",
+              "surface-tint": "#b61424",
+              "surface-container": "#e6e8ea",
+              "on-tertiary-fixed": "#390011",
+              "primary-container": "#ff7671",
+              "on-surface": "#2c2f30",
+              "on-error": "#ffefee",
+              "surface-container-highest": "#dadddf",
+              "on-primary-container": "#4e0007",
+              "tertiary-container": "#ff8fa4",
+              "surface-container-low": "#eff1f2",
+              "background": "#f5f6f7"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Background Content: Plans and Pricing (Simulated) -->
+<header class="fixed top-0 w-full z-40 bg-white/70 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(44,47,48,0.04)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-[1440px] mx-auto">
+<span class="text-2xl font-black bg-gradient-to-r from-[#b61424] to-[#ff7671] bg-clip-text text-transparent">Prisma Cultural</span>
+<nav class="hidden md:flex gap-8">
+<a class="font-headline font-bold tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Discover</a>
+<a class="font-headline font-bold tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Grants</a>
+<a class="font-headline font-bold tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors" href="#">Archive</a>
+<a class="font-headline font-bold tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-zinc-500">search</span>
+<span class="material-symbols-outlined text-zinc-500">account_circle</span>
+</div>
+</div>
+</header>
+<main class="pt-32 px-8 max-w-[1440px] mx-auto opacity-40 grayscale-[0.5]">
+<div class="text-center mb-16">
+<h1 class="font-headline text-5xl font-extrabold tracking-tighter mb-4 text-on-surface">Planos e Preços</h1>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg font-medium">Escolha a melhor forma de impulsionar seus projetos culturais.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<!-- Basic Plan Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="font-headline text-xl font-bold mb-2">Individual</h3>
+<div class="text-3xl font-black mb-6">Grátis</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Radar de Editais Básico</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Newsletter Semanal</li>
+</ul>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold">Começar Agora</button>
+</div>
+<!-- Pro Plan Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-xl border-2 border-primary-fixed relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary-fixed text-on-primary-container px-4 py-1 text-xs font-bold rounded-bl-lg">MAIS POPULAR</div>
+<h3 class="font-headline text-xl font-bold mb-2">Profissional</h3>
+<div class="text-3xl font-black mb-6">R$ 49,90<span class="text-sm font-medium text-on-surface-variant">/mês</span></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Alertas em tempo real</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Mentoria mensal em grupo</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Acesso ao Arquivo Histórico</li>
+</ul>
+<button class="w-full py-3 rounded-full bg-gradient-to-r from-primary to-primary-container text-white font-bold">Assinar Pro</button>
+</div>
+<!-- Collective Plan Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="font-headline text-xl font-bold mb-2">Coletivo</h3>
+<div class="text-3xl font-black mb-6">R$ 129,90<span class="text-sm font-medium text-on-surface-variant">/mês</span></div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Até 5 usuários</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Suporte Prioritário</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Painel Administrativo</li>
+</ul>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold">Contratar Plano</button>
+</div>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-md p-4">
+<!-- Modal Content (Step 1 of 2) -->
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.2)] overflow-hidden">
+<!-- Modal Header / Hero Image -->
+<div class="relative h-48 w-full bg-zinc-900">
+<img alt="Cultural Hub" class="w-full h-full object-cover opacity-60" data-alt="Modern minimalist cultural space with neon lighting and vibrant art installations in a spacious contemporary gallery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDQCzWM3s7Tyk3YFN84Cgjlt5xgd4nkmfqclr4Xl8GOD4cjH7Kfkq7wdU3bA0KbaSSONmPxKdLS0dxUAhzGzAIFI7Dr447-mGl0NqYc8XyUovtlzxCYJyilepeFJjDC-5dgxbYmnb3plsccE6oA0t5GUtt8rMN_ci6i2ZMqHNGT9kx3Px8N6FEeh9Bc2-xQD9O8S47dnwGSJL3J8BJui7lLrlTJXp7qXSC6REQ4BfPnH80E7H3kmC4w9itGbIUkG6PNJT-XMqxwPT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<!-- Progress Indicator -->
+<div class="absolute top-6 left-8 flex items-center gap-4">
+<div class="flex gap-1.5">
+<div class="h-1.5 w-8 rounded-full bg-primary-fixed"></div>
+<div class="h-1.5 w-8 rounded-full bg-surface-variant"></div>
+</div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-white drop-shadow-sm">Passo 1 de 2</span>
+</div>
+<!-- Close Button -->
+<button class="absolute top-4 right-4 h-10 w-10 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 text-white transition-all">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Form Content -->
+<div class="px-10 pb-12 -mt-8 relative z-10">
+<div class="mb-8">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface leading-tight mb-3">
+                        Faça parte do futuro da cultura
+                    </h2>
+<p class="font-body text-on-surface-variant font-medium leading-relaxed">
+                        Preencha seus dados para ser o primeiro a saber do lançamento.
+                    </p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1" for="name">Nome Completo</label>
+<div class="relative">
+<input class="w-full px-5 py-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary-fixed text-on-surface placeholder:text-outline outline-none transition-all" id="name" name="name" placeholder="Ex: Maria Souza" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant">person</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1" for="email">E-mail</label>
+<div class="relative">
+<input class="w-full px-5 py-4 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary-fixed text-on-surface placeholder:text-outline outline-none transition-all" id="email" name="email" placeholder="seu@email.com" type="email"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant">alternate_email</span>
+</div>
+</div>
+<div class="pt-4">
+<button class="group w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-lg shadow-primary-container/20 hover:shadow-xl hover:shadow-primary-container/30 active:scale-95 transition-all flex items-center justify-center gap-2" type="button">
+                            Continuar para Interesses
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center mt-6 text-[11px] text-on-surface-variant font-medium">
+                            Ao continuar, você concorda com nossos <a class="underline hover:text-primary transition-colors" href="#">Termos de Uso</a> e <a class="underline hover:text-primary transition-colors" href="#">Privacidade</a>.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<footer class="w-full border-t border-zinc-200/20 dark:border-zinc-800/20 bg-zinc-50 py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-[1440px] mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline font-bold text-zinc-900">Alerta Cultura</span>
+<p class="font-body text-sm tracking-wide text-zinc-600">© 2024 Prisma Cultural. Curation through clarity.</p>
+</div>
+<nav class="flex gap-8">
+<a class="font-body text-sm text-zinc-500 hover:text-zinc-800 hover:underline decoration-[#ff7671] underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="font-body text-sm text-zinc-500 hover:text-zinc-800 hover:underline decoration-[#ff7671] underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="font-body text-sm text-zinc-500 hover:text-zinc-800 hover:underline decoration-[#ff7671] underline-offset-4 transition-all" href="#">Accessibility</a>
+<a class="font-body text-sm text-zinc-500 hover:text-zinc-800 hover:underline decoration-[#ff7671] underline-offset-4 transition-all" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

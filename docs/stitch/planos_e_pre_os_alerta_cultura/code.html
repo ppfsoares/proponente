@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planos e Preços - Alerta Cultura</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#510017",
+              "surface-dim": "#d1d5d7",
+              "on-secondary-fixed-variant": "#006666",
+              "primary-fixed": "#ff7671",
+              "on-background": "#2c2f30",
+              "background": "#f5f6f7",
+              "on-tertiary-fixed-variant": "#77002d",
+              "on-tertiary-fixed": "#390011",
+              "surface-tint": "#b61424",
+              "on-tertiary-container": "#670025",
+              "primary-container": "#ff7671",
+              "tertiary-fixed": "#ff8fa4",
+              "surface-container": "#e6e8ea",
+              "on-secondary-fixed": "#004747",
+              "tertiary": "#b70049",
+              "error-dim": "#a70138",
+              "outline": "#757778",
+              "primary-fixed-dim": "#ff5a59",
+              "inverse-primary": "#ff5354",
+              "surface-container-highest": "#dadddf",
+              "on-primary": "#ffefee",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#7ee5e4",
+              "primary-dim": "#a4001a",
+              "on-secondary-container": "#005c5c",
+              "error": "#b41340",
+              "surface-container-low": "#eff1f2",
+              "tertiary-fixed-dim": "#ff7794",
+              "surface-variant": "#dadddf",
+              "primary": "#b61424",
+              "tertiary-container": "#ff8fa4",
+              "on-tertiary": "#ffeff0",
+              "surface-bright": "#f5f6f7",
+              "surface-container-high": "#e0e3e4",
+              "inverse-surface": "#0c0f10",
+              "on-surface": "#2c2f30",
+              "on-primary-fixed-variant": "#60000b",
+              "surface": "#f5f6f7",
+              "secondary-container": "#8cf3f3",
+              "on-secondary": "#bbfffe",
+              "secondary": "#006666",
+              "tertiary-dim": "#a1003f",
+              "on-primary-container": "#4e0007",
+              "outline-variant": "#abadae",
+              "on-surface-variant": "#595c5d",
+              "inverse-on-surface": "#9b9d9e",
+              "on-primary-fixed": "#000000",
+              "error-container": "#f74b6d",
+              "secondary-dim": "#005959",
+              "secondary-fixed": "#8cf3f3",
+              "on-error": "#ffefef"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-gradient-brand {
+        background: linear-gradient(135deg, #b61424 0%, #ff7671 100%);
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-2xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-black bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-headline">Alerta Cultura</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-semibold tracking-tight">
+<a class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors" href="#">Fale Conosco</a>
+<a class="text-orange-600 dark:text-orange-400 border-b-2 border-orange-600 pb-1" href="#">Planos</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-gray-600 dark:text-gray-400 font-semibold hover:text-orange-500 px-4 py-2 transition-colors active:scale-95 duration-200">Login</button>
+<button class="bg-gradient-brand text-on-primary font-headline font-bold px-6 py-2.5 rounded-full shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 duration-200">Começar Agora</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 overflow-x-hidden">
+<!-- Hero Header -->
+<header class="max-w-7xl mx-auto px-8 text-center mb-20 relative">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-container/10 rounded-full blur-3xl -z-10"></div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-on-surface">
+                Planos e <span class="text-primary">Preços</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Find the perfect fit for your cultural journey. Democratizando o acesso a editais com foco na potência criativa do Nordeste.
+            </p>
+</header>
+<!-- Pricing Bento Grid -->
+<section class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+<!-- Profile: Proponente -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col transition-all duration-300 hover:translate-y-[-4px] group">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">palette</span>
+<h3 class="font-headline text-2xl font-bold mb-2">Proponente</h3>
+<p class="text-sm text-on-surface-variant">(Preciso de recursos)</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Alertas personalizados de editais para artistas independentes.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Filtros por região e linguagem cultural.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Guia básico de prestação de contas.</span>
+</li>
+</ul>
+<div class="space-y-3">
+<button class="w-full py-3 px-4 rounded-lg bg-surface-container-low text-on-surface-variant font-bold text-sm tracking-wide">Em Breve</button>
+<button class="w-full py-3 px-4 rounded-lg bg-gradient-brand text-on-primary font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Registre-se para o Lançamento</button>
+</div>
+</div>
+<!-- Profile: Mentor -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col transition-all duration-300 hover:translate-y-[-4px] group border-2 border-primary-container/20">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">diversity_3</span>
+<h3 class="font-headline text-2xl font-bold mb-2">Mentor</h3>
+<p class="text-sm text-on-surface-variant">(Ajudo a captar recursos)</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Multi-dashboards para gestão de múltiplos clientes.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Relatórios automatizados de prospecção.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Timeline de prazos centralizada.</span>
+</li>
+</ul>
+<div class="space-y-3">
+<button class="w-full py-3 px-4 rounded-lg bg-surface-container-low text-on-surface-variant font-bold text-sm tracking-wide">Em Breve</button>
+<button class="w-full py-3 px-4 rounded-lg bg-gradient-brand text-on-primary font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Registre-se para o Lançamento</button>
+</div>
+</div>
+<!-- Profile: Gestor Gov -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col transition-all duration-300 hover:translate-y-[-4px] group">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">account_balance</span>
+<h3 class="font-headline text-2xl font-bold mb-2">Gestor Gov</h3>
+<p class="text-sm text-on-surface-variant">(Publico editais públicos)</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Sistema completo de publicação e transparência.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Análise de dados de impacto regional.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Conformidade com a Lei Paulo Gustavo e Aldir Blanc.</span>
+</li>
+</ul>
+<div class="space-y-3">
+<button class="w-full py-3 px-4 rounded-lg bg-surface-container-low text-on-surface-variant font-bold text-sm tracking-wide">Em Breve</button>
+<button class="w-full py-3 px-4 rounded-lg bg-gradient-brand text-on-primary font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Registre-se para o Lançamento</button>
+</div>
+</div>
+<!-- Profile: Gestor B2B -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col transition-all duration-300 hover:translate-y-[-4px] group">
+<div class="mb-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">corporate_fare</span>
+<h3 class="font-headline text-2xl font-bold mb-2">Gestor B2B</h3>
+<p class="text-sm text-on-surface-variant">(Iniciativa privada)</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Curadoria de projetos alinhados ao ESG.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Gestão de editais de patrocínio direto.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<span class="text-sm">Monitoramento de contrapartidas sociais.</span>
+</li>
+</ul>
+<div class="space-y-3">
+<button class="w-full py-3 px-4 rounded-lg bg-surface-container-low text-on-surface-variant font-bold text-sm tracking-wide">Em Breve</button>
+<button class="w-full py-3 px-4 rounded-lg bg-gradient-brand text-on-primary font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-95">Registre-se para o Lançamento</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Inclusion Section -->
+<section class="max-w-7xl mx-auto px-8 mt-32">
+<div class="bg-surface-container-low rounded-3xl overflow-hidden flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 h-80 md:h-auto min-h-[400px] relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Vibrant close-up of traditional Northeast Brazilian embroidery and colorful textures with warm golden hour lighting and focus on intricate craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUG0Mm5ikj4w9oGV7QaRw_qevuzTvyl1d5DKfIGNUQ8rRHJZ3qLt_bQIvepKIF_Bq0O1r0sb2vnhHENsRFs8mQf2vAuLpPYG1f1xxRHW7Oahnb8TW1SIwbZq3LmQ0Th0RtJw0jBjKbsNygJ2DXOkKxpysexhZOgmw-ak3B0rTtIHrqE2zNdV_9mqxY0qs5itATRQneG1tk87ZV00ZIArvIH_tsmg_Fbkdq13-5ll3W84PEg73m6UrW4QpmLBU9yAfevYtYJG1wP_-O"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<div class="w-full md:w-1/2 p-12 md:p-20">
+<h2 class="font-headline text-4xl font-extrabold mb-6 leading-tight">Cultura que Transborda o <span class="text-primary">Nordeste</span></h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Nascemos na Paraíba com o propósito de conectar talentos locais a oportunidades globais. Nossa tecnologia é o curador digital que entende a sotaque, a urgência e a potência da nossa gente.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-3xl font-black text-primary">Paraíba</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">Sede Principal</span>
+</div>
+<div class="w-px h-12 bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-black text-secondary">SomaINOVA</span>
+<span class="text-xs uppercase tracking-widest font-bold opacity-60">Aesthetic Partner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal Overlay (Background Dim) -->
+<div class="fixed inset-0 z-[100] hidden" id="modal-container">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm"></div>
+<div class="relative flex items-center justify-center min-h-screen p-4">
+<!-- Step 1: Registration Modal -->
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-2xl p-10 transform transition-all duration-300 relative" id="step-1">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="text-center mb-8">
+<div class="w-16 h-16 bg-primary-container/20 rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<h2 class="font-headline text-3xl font-extrabold mb-2">Entre na Lista</h2>
+<p class="text-on-surface-variant">Seja o primeiro a saber quando liberarmos o acesso.</p>
+</div>
+<form class="space-y-5">
+<div>
+<label class="block text-sm font-bold mb-2 ml-1 text-on-surface">Nome Completo</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3.5 px-5 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Como deseja ser chamado?" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2 ml-1 text-on-surface">E-mail</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3.5 px-5 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="seu@email.com" type="email"/>
+</div>
+<button class="w-full py-4 bg-gradient-brand text-on-primary font-headline font-bold rounded-xl shadow-lg shadow-primary/30 active:scale-95 transition-all mt-4" type="button">Continuar</button>
+</form>
+</div>
+<!-- Step 2: Interest Survey (Hidden by default, shown for preview structure) -->
+<div class="hidden bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl p-10 transform transition-all duration-300 relative" id="step-2">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="mb-10">
+<h2 class="font-headline text-3xl font-extrabold mb-2">Nos conte um pouco sobre seus interesses</h2>
+<p class="text-on-surface-variant">Isso nos ajuda a personalizar os alertas que você receberá.</p>
+</div>
+<form class="space-y-8">
+<section>
+<h4 class="text-sm font-black uppercase tracking-wider text-primary mb-4">Qual sua principal área de atuação?</h4>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Música</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Artes Visuais</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Teatro</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Cinema</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Literatura</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Outros</span>
+</label>
+</div>
+</section>
+<section>
+<h4 class="text-sm font-black uppercase tracking-wider text-primary mb-4">Qual seu principal desafio hoje?</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Cumprir Prazos</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Lidar com Burocracia</span>
+</label>
+<label class="flex items-center gap-3 p-3 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm font-medium">Encontrar Editais Relevantes</span>
+</label>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold mb-2 ml-1">Qual sua localização?</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-3 px-5 focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Ex: João Pessoa, PB" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold mb-2 ml-1">Comentários diversos</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl py-3 px-5 focus:ring-2 focus:ring-primary/20 outline-none resize-none" placeholder="Diga-nos o que você precisa..." rows="1"></textarea>
+</div>
+</div>
+<button class="w-full py-4 bg-gradient-brand text-on-primary font-headline font-bold rounded-xl shadow-lg active:scale-95 transition-all" type="submit">Finalizar Inscrição</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-gray-50 dark:bg-gray-900 w-full border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-xl font-extrabold text-gray-900 dark:text-white font-headline">Alerta Cultura</span>
+<p class="font-['Manrope'] text-sm leading-relaxed text-gray-500 dark:text-gray-400 max-w-xs text-center md:text-left">
+                    © 2024 Alerta Cultura - João Pessoa, PB. Todos os direitos reservados.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-orange-500 underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100" href="#">Privacidade</a>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium hover:text-orange-500 underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100" href="#">Termos de Uso</a>
+<a class="text-orange-600 dark:text-orange-400 text-sm font-bold hover:text-orange-500 underline-offset-4 hover:underline transition-opacity opacity-90 hover:opacity-100" href="#">SomaINOVA</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">language</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
