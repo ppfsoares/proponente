@@ -65,6 +65,9 @@ Este repositório consolida toda a base de documentação, design e engenharia d
 
    # Sincronizar o schema com o banco de dados
    npx prisma db push
+
+   # Popular o banco de dados com dados iniciais
+   npx prisma db seed
    ```
 
 4. **Executar em modo desenvolvimento:**
