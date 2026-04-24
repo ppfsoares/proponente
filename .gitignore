@@ -7,3 +7,6 @@ coverage/
 .env*
 !.env.example
 .next/
+
+# Sentry Config File
+.env.sentry-build-plugin
