@@ -32,7 +32,7 @@ Este repositório consolida toda a base de documentação, design e engenharia d
 | [⚙️ **Especificação Técnica**](./docs/spech_tech.md) | Stack (Next.js, Python), infraestrutura e segurança. |
 | [📱 **Especificação de UI**](./docs/spech_ui.md) | Fluxos de usuário e detalhamento das interfaces. |
 | [🎨 **Design System**](./docs/design_system.md) | Tokens, tipografia, cores e acessibilidade. |
-| [📝 **Plano de RNF**](./docs/plano_rnf.md) | Estratégia de observabilidade, rastreabilidade e testes automatizados. |
+| [📝 **Plano de o11y**](./docs/plano_o11y.md) | Estratégia de observabilidade, rastreabilidade e testes automatizados. |
 | [🤖 **Prompt Stitch**](./docs/prompt_stitch.md) | Instruções para prototipagem generativa (Google Stitch). |
 
 ---
