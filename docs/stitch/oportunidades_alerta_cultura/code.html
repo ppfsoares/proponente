@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Central de Oportunidades | Alerta Cultura</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-effect { backdrop-filter: blur(20px); }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#004747",
+              "surface-dim": "#d1d5d7",
+              "on-primary-fixed-variant": "#60000b",
+              "surface-variant": "#dadddf",
+              "secondary-fixed-dim": "#7ee5e4",
+              "error-dim": "#a70138",
+              "primary-fixed": "#ff7671",
+              "primary-dim": "#a4001a",
+              "on-primary": "#ffefee",
+              "outline-variant": "#abadae",
+              "on-secondary-fixed-variant": "#006666",
+              "surface-container-high": "#e0e3e4",
+              "inverse-primary": "#ff5354",
+              "secondary-fixed": "#8cf3f3",
+              "outline": "#757778",
+              "tertiary-dim": "#a1003f",
+              "on-tertiary-container": "#670025",
+              "surface-tint": "#b61424",
+              "surface-bright": "#f5f6f7",
+              "on-secondary-container": "#005c5c",
+              "on-tertiary": "#ffeff0",
+              "secondary-container": "#8cf3f3",
+              "on-tertiary-fixed-variant": "#77002d",
+              "on-error": "#ffefef",
+              "on-primary-fixed": "#000000",
+              "inverse-surface": "#0c0f10",
+              "error": "#b41340",
+              "tertiary": "#b70049",
+              "on-error-container": "#510017",
+              "tertiary-container": "#ff8fa4",
+              "surface": "#f5f6f7",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#eff1f2",
+              "secondary": "#006666",
+              "secondary-dim": "#005959",
+              "inverse-on-surface": "#9b9d9e",
+              "surface-container": "#e6e8ea",
+              "on-background": "#2c2f30",
+              "on-secondary": "#bbfffe",
+              "error-container": "#f74b6d",
+              "primary": "#b61424",
+              "on-surface": "#2c2f30",
+              "primary-container": "#ff7671",
+              "on-surface-variant": "#595c5d",
+              "tertiary-fixed-dim": "#ff7794",
+              "primary-fixed-dim": "#ff5a59",
+              "tertiary-fixed": "#ff8fa4",
+              "on-tertiary-fixed": "#390011",
+              "background": "#f5f6f7",
+              "surface-container-highest": "#dadddf",
+              "on-primary-container": "#4e0007"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl no-border bg-surface-container-low transition-all duration-300">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF5D4E] to-[#ff7671] bg-clip-text text-transparent">Alerta Cultura</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Descobrir</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Alertas</a>
+<a class="text-orange-600 dark:text-orange-400 font-bold border-b-2 border-orange-500 pb-1 transition-all duration-300" href="#">Oportunidades</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2 gap-2 focus-within:ring-2 ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Buscar editais..." type="text"/>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-150">
+                    Entrar
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-6 py-10">
+<!-- Header Section -->
+<header class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Central de Oportunidades</span>
+<h1 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-tight">
+                        Seu próximo projeto <br/>começa aqui.
+                    </h1>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-2 rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-weight="fill">psychology</span>
+</div>
+<div class="pr-4">
+<p class="text-[10px] text-outline font-bold uppercase tracking-wider">IA Ativada</p>
+<p class="text-sm font-bold text-on-surface">Match Personalizado</p>
+</div>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Sidebar Filters -->
+<aside class="lg:col-span-3 space-y-8">
+<div class="bg-surface-container-low p-6 rounded-3xl sticky top-28">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+                        Filtros
+                    </h3>
+<!-- Filter Group: Região -->
+<div class="mb-8">
+<label class="text-xs font-bold text-outline uppercase tracking-widest mb-4 block">Região Nordeste</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input checked="" class="hidden" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Bahia</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Pernambuco</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Ceará</span>
+</label>
+</div>
+</div>
+<!-- Filter Group: Tipo de Edital -->
+<div class="mb-8">
+<label class="text-xs font-bold text-outline uppercase tracking-widest mb-4 block">Tipo de Edital</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input checked="" class="hidden" name="type" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Todos</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" name="type" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Lei Paulo Gustavo</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" name="type" type="radio"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Aldir Blanc II</span>
+</label>
+</div>
+</div>
+<button class="w-full py-3 bg-surface-container-highest rounded-2xl text-on-surface font-bold text-sm hover:bg-surface-variant transition-colors">
+                        Limpar Filtros
+                    </button>
+</div>
+</aside>
+<!-- Cards Grid (Feed) -->
+<section class="lg:col-span-9">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Opportunity Card 1 (Premium/High Match) -->
+<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<div class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full flex items-center gap-2 animate-pulse">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-black">98% Match</span>
+</div>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mb-4">Música • Salvador, BA</span>
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">Festival de Inverno 2024: Chamada de Bandas</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 font-body">Fomento para circulação de artistas independentes do cenário autoral soteropolitano com foco em diversidade rítmica.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Valor do Edital</p>
+<p class="text-lg font-extrabold text-on-surface">R$ 45.000</p>
+</div>
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Prazo Final</p>
+<p class="text-lg font-extrabold text-error">12 Out</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+                                Ver Detalhes
+                            </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-outline hover:text-primary hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Opportunity Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<div class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span class="text-xs font-black">82% Match</span>
+</div>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mb-4">Audiovisual • Recife, PE</span>
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">Produção de Curta-Metragem Experimental</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 font-body">Apoio direto para finalização de obras cinematográficas de baixo orçamento no estado de Pernambuco.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Valor do Edital</p>
+<p class="text-lg font-extrabold text-on-surface">R$ 120.000</p>
+</div>
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Prazo Final</p>
+<p class="text-lg font-extrabold text-on-surface">05 Nov</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+                                Ver Detalhes
+                            </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Opportunity Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-6">
+<div class="bg-tertiary-container text-on-tertiary-container px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">alarm</span>
+<span class="text-xs font-black">75% Match</span>
+</div>
+</div>
+<div class="mb-6">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mb-4">Artes Visuais • Fortaleza, CE</span>
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-2 group-hover:text-primary transition-colors">Muralismo Urbano: Cores do Sertão</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 font-body">Intervenções artísticas em espaços públicos de Fortaleza visando a revitalização do centro histórico.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Valor do Edital</p>
+<p class="text-lg font-extrabold text-on-surface">R$ 15.000</p>
+</div>
+<div class="bg-surface-container-low/50 p-4 rounded-2xl">
+<p class="text-[10px] text-outline font-bold uppercase tracking-widest mb-1">Prazo Final</p>
+<p class="text-lg font-extrabold text-on-surface">28 Set</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+                                Ver Detalhes
+                            </button>
+<button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-outline hover:text-primary hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- CTA Bento Card -->
+<div class="group bg-gradient-to-br from-[#FF5D4E] to-[#b61424] rounded-[2rem] p-8 transition-all duration-300 flex flex-col justify-between text-white relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h3 class="text-2xl font-extrabold mb-4 leading-tight">Não encontrou o que buscava?</h3>
+<p class="text-white/80 font-body text-sm mb-6">Nossa Inteligência Artificial pode monitorar editais específicos para o seu perfil e te avisar em tempo real.</p>
+</div>
+<button class="w-fit bg-white text-primary px-8 py-3 rounded-full font-bold text-sm hover:bg-orange-50 transition-all active:scale-95">
+                            Configurar Alerta Personalizado
+                        </button>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white font-bold text-sm">1</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant font-bold text-sm hover:bg-surface-variant">2</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-low text-on-surface-variant font-bold text-sm hover:bg-surface-variant">3</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 mt-20">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-bold text-slate-900 dark:text-white text-lg">Alerta Cultura</span>
+<p class="text-slate-500 text-sm font-body">© 2024 Alerta Cultura - Monitoramento Inteligente Nordeste</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Termos</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Privacidade</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Contato</a>
+<a class="text-sm text-slate-500 hover:underline hover:text-orange-600 transition-colors" href="#">Sobre</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-transform" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-transform" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold mt-1">Alertas</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 rounded-2xl px-5 py-2 scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-[10px] font-bold mt-1">Match IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold mt-1">Perfil</span>
+</a>
+</nav>
+</body></html>

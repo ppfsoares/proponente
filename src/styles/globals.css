@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-gradient {
+    @apply bg-gradient-to-br from-primary to-primary-container;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-tertiary to-secondary bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface antialiased selection:bg-primary/20;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}

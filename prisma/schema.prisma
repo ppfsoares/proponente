@@ -3,20 +3,21 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Profile {
-  id                String   @id @default(uuid())
-  userId            String   @unique
-  name              String
-  cnpj              String?
-  organizationSize  String   // Individual, Pequeno, Médio/Grande
-  state             String   // Nordeste states
-  areas             String[] // Música, Artes Cênicas, etc.
-  createdAt         DateTime @default(now())
-  updatedAt         DateTime @updatedAt
+  id               String   @id @default(uuid())
+  userId           String   @unique
+  name             String
+  cnpj             String?
+  organizationSize String
+  state            String
+  areas            String[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 }
 
 model Grant {
@@ -33,10 +34,20 @@ model Grant {
 }
 
 model Alert {
-  id             String   @id @default(uuid())
-  userId         String
-  minDeadline    Int?     // days
-  grantTypes     String[] // Lei Paulo Gustavo, etc.
-  channels       String[] // Email, WhatsApp, Push
-  createdAt      DateTime @default(now())
+  id          String   @id @default(uuid())
+  userId      String
+  minDeadline Int?
+  grantTypes  String[]
+  channels    String[]
+  createdAt   DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  action    String   // EX: "PROFILE_UPDATE", "EDITE_MATCH"
+  entity    String   // EX: "Profile", "Grant"
+  entityId  String?
+  userId    String?
+  details   Json?    // Detalhes extras em JSON
+  createdAt DateTime @default(now())
 }

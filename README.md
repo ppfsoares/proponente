@@ -13,7 +13,7 @@ O **Soma Alerta** é uma plataforma inteligente e inclusiva de monitoramento e n
 Este repositório consolida toda a base de documentação, design e engenharia do ecossistema Soma. A documentação atua como a **única fonte de verdade** para o desenvolvimento assistido por IA e colaboração humana.
 
 ### 🍱 Ecossistema Soma
-- **Soma Alerta (App/BFF)**: Plataforma de monitoramento e notificações.
+- **Soma Alerta (App/BFF)** (este repo): Plataforma de monitoramento e notificações.
 - **Soma Index (Scraper)**: Motor de busca e indexação de editais em Diários Oficiais.
 - **Soma Assistente (IA)**: Tradutor de editais complexos em resumos simplificados.
 
@@ -25,9 +25,14 @@ Este repositório consolida toda a base de documentação, design e engenharia d
 | :--- | :--- |
 | [🎯 **Problem Statement**](./docs/problem_statement.md) | Contexto de negócio, dores dos usuários e oportunidades. |
 | [📋 **PRD**](./docs/prd.md) | Requisitos funcionais, matriz de usuários e métricas. |
-| [⚙️ **Especificação Técnica**](./docs/spech_tech.md) | Stack (Next.js, Python), arquitetura e segurança. |
+| [📊 **Lean Canvas**](./docs/lean_canvas.md) | Modelo de negócio enxuto e proposta de valor. |
+| [👥 **Personas**](./docs/personas.md) | Detalhamento dos perfis dos usuários alvo. |
+| [🛣️ **Jornada do Usuário**](./docs/user_journey.md) | Mapeamento da experiência e pontos de contato. |
+| [🏗️ **Modelos C4**](./docs/c4_models.md) | Arquitetura técnica em múltiplos níveis (Contexto, Containers, Componentes). |
+| [⚙️ **Especificação Técnica**](./docs/spech_tech.md) | Stack (Next.js, Python), infraestrutura e segurança. |
 | [📱 **Especificação de UI**](./docs/spech_ui.md) | Fluxos de usuário e detalhamento das interfaces. |
 | [🎨 **Design System**](./docs/design_system.md) | Tokens, tipografia, cores e acessibilidade. |
+| [📝 **Plano de o11y**](./docs/plano_o11y.md) | Estratégia de observabilidade, rastreabilidade e testes automatizados. |
 | [🤖 **Prompt Stitch**](./docs/prompt_stitch.md) | Instruções para prototipagem generativa (Google Stitch). |
 
 ---
@@ -65,6 +70,9 @@ Este repositório consolida toda a base de documentação, design e engenharia d
 
    # Sincronizar o schema com o banco de dados
    npx prisma db push
+
+   # Popular o banco de dados com dados iniciais
+   npx prisma db seed
    ```
 
 4. **Executar em modo desenvolvimento:**
