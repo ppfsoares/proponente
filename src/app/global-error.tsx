@@ -16,10 +16,8 @@ export default function GlobalError({
 
   return (
     <html lang="pt-BR">
-      <head>
-        <title>Erro Interno</title>
-      </head>
       <body>
+        <title>Erro Interno</title>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'sans-serif' }}>
           <h2>Algo deu errado!</h2>
           <p>Ocorreu um erro interno. Nossa equipe já foi notificada.</p>
