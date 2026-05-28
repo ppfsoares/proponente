@@ -55,7 +55,7 @@ export default async function Home() {
               </div>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-                <Link href="/cadastro" className="w-full sm:w-auto primary-gradient text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all font-label uppercase tracking-wide text-center">
+                <Link href="/login" className="w-full sm:w-auto primary-gradient text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all font-label uppercase tracking-wide text-center">
                   Faça parte da comunidade
                 </Link>
                 <Link href="/feed" className="flex items-center gap-2 text-on-surface font-bold hover:text-primary transition-colors font-label uppercase tracking-wide">
