@@ -11,6 +11,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [checkingAuth, setCheckingAuth] = useState(false);
+  const [linkSent, setLinkSent] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -74,6 +75,7 @@ export default function LoginPage() {
       toast.error(error.message);
     } else {
       toast.success("Link de acesso enviado para seu e-mail!");
+      setLinkSent(true);
     }
     setLoading(false);
   };
@@ -123,7 +125,8 @@ export default function LoginPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-2 border-transparent focus:border-primary/20 focus:ring-0 focus:bg-white transition-all text-on-surface font-semibold font-body" 
+                    disabled={linkSent}
+                    className="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-2 border-transparent focus:border-primary/20 focus:ring-0 focus:bg-white transition-all text-on-surface font-semibold font-body disabled:opacity-50" 
                     placeholder="seu@email.com" 
                     type="email" 
                   />
@@ -133,13 +136,22 @@ export default function LoginPage() {
 
               <div className="pt-4">
                 <button 
-                  disabled={loading}
+                  disabled={loading || linkSent}
                   className="w-full py-5 bg-linear-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm disabled:opacity-70 disabled:hover:scale-100" 
                   type="submit"
                 >
-                  {loading ? 'Enviando...' : 'Entrar com Link Mágico'}
+                  {loading ? 'Enviando...' : linkSent ? 'Link Enviado!' : 'Entrar com Link Mágico'}
                 </button>
               </div>
+
+              {linkSent && (
+                <div className="mt-4 p-4 bg-primary/10 rounded-2xl border border-primary/20 text-center flex items-center justify-center gap-3">
+                  <span className="material-symbols-outlined text-primary font-bold">mark_email_read</span>
+                  <p className="text-xs font-bold text-primary font-body uppercase tracking-wider">
+                    Link enviado! Verifique seu e-mail ({email}).
+                  </p>
+                </div>
+              )}
             </form>
           </div>
         </div>

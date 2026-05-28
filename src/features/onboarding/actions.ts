@@ -12,6 +12,12 @@ export async function checkUserProfile(userId: string) {
   return !!profile;
 }
 
+export async function getUserProfile(userId: string) {
+  return await prisma.profile.findUnique({
+    where: { userId },
+  });
+}
+
 export async function handleOnboarding(formData: FormData) {
   const name = formData.get("name") as string;
   const area = formData.get("area") as string;
