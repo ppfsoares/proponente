@@ -61,7 +61,7 @@ export const Navbar = () => {
 
   const links = [
     { label: "Descobrir", href: "/" },
-    { label: "Alertas", href: "/alertas" },
+    ...(session ? [{ label: "Alertas", href: "/alertas" }] : []),
     { label: "Oportunidades", href: "/feed" },
     { label: "Planos", href: "/planos" },
   ];

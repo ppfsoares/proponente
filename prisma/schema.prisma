@@ -37,6 +37,8 @@ model Alert {
   minDeadline Int?
   grantTypes  String[]
   channels    String[]
+  states      String[]
+  valueRange  String?
   createdAt   DateTime @default(now())
 }
 

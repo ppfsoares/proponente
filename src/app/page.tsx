@@ -89,7 +89,7 @@ export default async function Home() {
               <h2 className="font-headline text-4xl font-extrabold text-on-background mb-4">Foco Regional Estratégico</h2>
               <p className="text-on-surface-variant max-w-xl font-body mx-auto lg:mx-0">Monitoramos em tempo real as principais fontes de fomento do Nordeste brasileiro.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-8 rounded-4xl flex flex-col justify-between relative overflow-hidden group border border-outline-variant/10">
                 <div className="z-10">
@@ -117,7 +117,7 @@ export default async function Home() {
               <div className="md:col-span-1 bg-surface-container-lowest p-8 rounded-4xl flex flex-col justify-between border border-outline-variant/10">
                 <span className="material-symbols-outlined text-primary text-4xl mb-4">notifications_active</span>
                 <div>
-                  <h4 className="font-bold mb-1 font-headline">Alertas IA</h4>
+                  <h4 className="font-bold mb-1 font-headline">Alertas Inteligentes</h4>
                   <p className="text-xs text-on-surface-variant font-body">Notificações personalizadas via WhatsApp e e-mail.</p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default async function Home() {
                 <span className="material-symbols-outlined text-4xl mb-4">groups</span>
                 <div>
                   <h4 className="font-bold mb-1 font-headline">Comunidade</h4>
-                  <p className="text-xs text-white/80 font-body">Mais de 5.000 fazedores de cultura conectados.</p>
+                  <p className="text-xs text-white/80 font-body">Fazedores de cultura conectados para produzir mais e melhor.</p>
                 </div>
               </div>
             </div>
@@ -151,10 +151,10 @@ export default async function Home() {
               {featuredGrants.map((grant) => (
                 <Link href={`/editais/${grant.id}`} key={grant.id} className="bg-surface-container-lowest rounded-3xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all shadow-sm">
                   <div className="relative h-48 overflow-hidden bg-surface-variant">
-                    <img 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" 
-                      src={`https://picsum.photos/seed/${grant.id}/800/600`} 
-                      alt={grant.title} 
+                    <img
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80"
+                      src={`https://picsum.photos/seed/${grant.id}/800/600`}
+                      alt={grant.title}
                     />
                     <div className="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider font-label">
                       Ativo
