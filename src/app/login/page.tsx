@@ -1,7 +1,36 @@
+"use client";
+
+import { useState } from "react";
 import { Navbar } from "@/features/discovery/components/Navbar";
-import { handleLogin } from "@/features/auth/actions";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
 
 export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    
+    // Fallback to window.location.origin if process.env.NEXT_PUBLIC_APP_URL is not set
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || (typeof window !== "undefined" ? window.location.origin : "");
+    
+    const { error } = await supabase.auth.signInWithOtp({ 
+      email,
+      options: {
+        emailRedirectTo: `${appUrl}/cadastro`
+      }
+    });
+    
+    if (error) {
+      toast.error(error.message);
+    } else {
+      toast.success("Link de acesso enviado para seu e-mail!");
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen bg-surface flex flex-col">
       <Navbar />
@@ -24,12 +53,14 @@ export default function LoginPage() {
               <p className="text-on-surface-variant font-medium font-body italic text-sm">A sua conexão com a cultura do Nordeste começa aqui.</p>
             </div>
 
-            <form action={handleLogin} className="space-y-6">
+            <form onSubmit={handleLogin} className="space-y-6">
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1 font-label">E-mail</label>
                 <div className="relative">
                   <input 
                     name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-2 border-transparent focus:border-primary/20 focus:ring-0 focus:bg-white transition-all text-on-surface font-semibold font-body" 
                     placeholder="seu@email.com" 
@@ -39,26 +70,13 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-on-surface-variant ml-1 font-label">Senha</label>
-                <div className="relative">
-                  <input 
-                    name="password"
-                    required
-                    className="w-full px-6 py-4 rounded-2xl bg-surface-container-low border-2 border-transparent focus:border-primary/20 focus:ring-0 focus:bg-white transition-all text-on-surface font-semibold font-body" 
-                    placeholder="••••••••" 
-                    type="password" 
-                  />
-                  <span className="material-symbols-outlined absolute right-5 top-1/2 -translate-y-1/2 text-on-surface-variant/50">lock</span>
-                </div>
-                <div className="flex justify-end p-1">
-                  <button type="button" className="text-xs font-bold text-primary hover:underline font-label uppercase">Esqueci a senha</button>
-                </div>
-              </div>
-
               <div className="pt-4 space-y-4">
-                <button className="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm" type="submit">
-                  Entrar
+                <button 
+                  disabled={loading}
+                  className="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm disabled:opacity-70 disabled:hover:scale-100" 
+                  type="submit"
+                >
+                  {loading ? 'Enviando...' : 'Entrar com Link Mágico'}
                 </button>
                 
                 <div className="flex items-center gap-4 py-2">

@@ -1,5 +1,6 @@
 import { Navbar } from "@/features/discovery/components/Navbar";
 import { Footer } from "@/features/discovery/components/Footer";
+import Link from "next/link";
 
 export default function PlansPage() {
   return (
@@ -87,9 +88,9 @@ export default function PlansPage() {
                   <div className="text-center py-4 bg-surface-container-low rounded-2xl">
                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Em Breve</span>
                   </div>
-                  <button className={`w-full py-5 px-6 rounded-full font-bold text-sm shadow-md transition-all active:scale-95 font-label uppercase tracking-widest ${plan.featured ? 'bg-gradient-to-r from-primary to-primary-container text-on-primary' : 'bg-surface-container-highest text-on-surface'}`}>
+                  <Link href="/cadastro" className={`block text-center w-full py-5 px-6 rounded-full font-bold text-sm shadow-md transition-all active:scale-95 font-label uppercase tracking-widest ${plan.featured ? 'bg-gradient-to-r from-primary to-primary-container text-on-primary' : 'bg-surface-container-highest text-on-surface'}`}>
                     Me Avise no Lançamento
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

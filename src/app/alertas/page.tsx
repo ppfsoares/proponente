@@ -1,8 +1,26 @@
+"use client";
+
 import { Navbar } from "@/features/discovery/components/Navbar";
 import { Footer } from "@/features/discovery/components/Footer";
 import { BottomNav } from "@/features/discovery/components/BottomNav";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
+import Link from "next/link";
 
 export default function MyAlertsPage() {
+  const router = useRouter();
+
+  const handleSavePreferences = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (!session) {
+      router.push('/login');
+    } else {
+      toast.success('Preferências salvas com sucesso!');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-surface">
       <Navbar />
@@ -81,13 +99,19 @@ export default function MyAlertsPage() {
             <div className="bg-primary-container p-8 rounded-xl text-on-primary-container shadow-lg flex flex-col gap-4">
               <h3 className="text-xl font-bold mb-2 font-headline">Salvar Configurações</h3>
               <p className="text-sm opacity-90 mb-4 font-medium font-body">Suas preferências serão atualizadas instantaneamente em nossa rede de monitoramento.</p>
-              <button className="w-full bg-on-primary-container text-surface-container-lowest py-4 rounded-full font-bold text-lg hover:opacity-90 active:scale-95 transition-all shadow-md font-label uppercase tracking-wide">
+              <button 
+                onClick={handleSavePreferences}
+                className="w-full bg-on-primary-container text-surface-container-lowest py-4 rounded-full font-bold text-lg hover:opacity-90 active:scale-95 transition-all shadow-md font-label uppercase tracking-wide"
+              >
                 Salvar Preferências
               </button>
-              <button className="w-full bg-white/20 border-2 border-white/30 text-on-primary-container py-4 rounded-full font-bold text-lg hover:bg-white/30 active:scale-95 transition-all flex items-center justify-center gap-2 font-label uppercase tracking-wide">
+              <Link 
+                href="/feed"
+                className="w-full bg-white/20 border-2 border-white/30 text-on-primary-container py-4 rounded-full font-bold text-lg hover:bg-white/30 active:scale-95 transition-all flex items-center justify-center gap-2 font-label uppercase tracking-wide"
+              >
                 <span className="material-symbols-outlined">send</span>
                 Testar Alerta
-              </button>
+              </Link>
             </div>
 
             <div className="bg-surface-container-low p-6 rounded-xl border-2 border-dashed border-outline-variant/30">
