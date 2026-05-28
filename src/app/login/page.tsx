@@ -1,13 +1,60 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Navbar } from "@/features/discovery/components/Navbar";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
+import { checkUserProfile } from "@/features/onboarding/actions";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [checkingAuth, setCheckingAuth] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        setCheckingAuth(true);
+        try {
+          const hasProfile = await checkUserProfile(session.user.id);
+          if (hasProfile) {
+            router.push("/feed");
+          } else {
+            router.push("/cadastro");
+          }
+        } catch (err) {
+          console.error("Erro ao verificar perfil:", err);
+          setCheckingAuth(false);
+        }
+      }
+    };
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === "SIGNED_IN" && session) {
+        setCheckingAuth(true);
+        try {
+          const hasProfile = await checkUserProfile(session.user.id);
+          if (hasProfile) {
+            router.push("/feed");
+          } else {
+            router.push("/cadastro");
+          }
+        } catch (err) {
+          console.error("Erro ao verificar perfil pós-login:", err);
+          setCheckingAuth(false);
+        }
+      }
+    });
+
+    checkSession();
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [router]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +66,7 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithOtp({ 
       email,
       options: {
-        emailRedirectTo: `${appUrl}/cadastro`
+        emailRedirectTo: `${appUrl}/login`
       }
     });
     
@@ -30,6 +77,20 @@ export default function LoginPage() {
     }
     setLoading(false);
   };
+
+  if (checkingAuth) {
+    return (
+      <div className="min-h-screen bg-surface flex flex-col">
+        <Navbar />
+        <main className="grow flex items-center justify-center p-6 bg-surface-container-low">
+          <div className="text-center space-y-4">
+            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto animate-duration-1000"></div>
+            <p className="text-on-surface-variant font-semibold font-body">Verificando sua conta...</p>
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-surface flex flex-col">
@@ -49,8 +110,8 @@ export default function LoginPage() {
 
           <div className="px-10 pb-12 -mt-12 relative z-10">
             <div className="mb-10 text-center">
-              <h1 className="text-3xl font-extrabold text-on-surface font-headline tracking-tight mb-2">Bem-vindo de volta</h1>
-              <p className="text-on-surface-variant font-medium font-body italic text-sm">A sua conexão com a cultura do Nordeste começa aqui.</p>
+              <h1 className="text-3xl font-extrabold text-on-surface font-headline tracking-tight mb-2">Acesso por Link Mágico</h1>
+              <p className="text-on-surface-variant font-medium font-body italic text-sm">Digite seu e-mail para receber um link de acesso instantâneo.</p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-6">
@@ -70,7 +131,7 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              <div className="pt-4 space-y-4">
+              <div className="pt-4">
                 <button 
                   disabled={loading}
                   className="w-full py-5 bg-linear-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm disabled:opacity-70 disabled:hover:scale-100" 
@@ -78,22 +139,7 @@ export default function LoginPage() {
                 >
                   {loading ? 'Enviando...' : 'Entrar com Link Mágico'}
                 </button>
-                
-                <div className="flex items-center gap-4 py-2">
-                  <div className="h-px grow bg-outline-variant/20"></div>
-                  <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] font-label">Ou</span>
-                  <div className="h-px grow bg-outline-variant/20"></div>
-                </div>
-
-                <button type="button" className="w-full py-4 border-2 border-outline-variant/20 text-on-surface font-bold rounded-full hover:bg-surface-container-low transition-all flex items-center justify-center gap-3 font-label uppercase tracking-widest text-xs">
-                  <img src="https://www.google.com/favicon.ico" className="w-4 h-4" alt="Google" />
-                  Continuar com Google
-                </button>
               </div>
-
-              <p className="text-center mt-8 text-sm font-medium text-on-surface-variant font-body">
-                Não tem uma conta? <a href="/cadastro" className="text-primary font-bold hover:underline">Cadastre-se agora</a>
-              </p>
             </form>
           </div>
         </div>

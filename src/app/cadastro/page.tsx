@@ -1,8 +1,61 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Navbar } from "@/features/discovery/components/Navbar";
 import { Footer } from "@/features/discovery/components/Footer";
+import { supabase } from "@/lib/supabase";
 import { handleOnboarding } from "@/features/onboarding/actions";
+import { checkUserProfile } from "@/features/onboarding/actions";
+import { toast } from "sonner";
 
 export default function OnboardingPage() {
+  const [loadingSession, setLoadingSession] = useState(true);
+  const [userId, setUserId] = useState<string | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const verifySessionAndProfile = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error("Por favor, faça login primeiro.");
+        router.push("/login");
+        return;
+      }
+
+      setUserId(session.user.id);
+
+      try {
+        const hasProfile = await checkUserProfile(session.user.id);
+        if (hasProfile) {
+          router.push("/feed");
+        } else {
+          setLoadingSession(false);
+        }
+      } catch (err) {
+        console.error("Erro ao validar perfil em cadastro:", err);
+        setLoadingSession(false);
+      }
+    };
+
+    verifySessionAndProfile();
+  }, [router]);
+
+  if (loadingSession) {
+    return (
+      <div className="min-h-screen bg-surface flex flex-col">
+        <Navbar />
+        <main className="grow flex items-center justify-center p-6 bg-surface-container-low">
+          <div className="text-center space-y-4">
+            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto animate-duration-1000"></div>
+            <p className="text-on-surface-variant font-semibold font-body">Verificando acesso...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-surface flex flex-col">
       <Navbar />
@@ -58,6 +111,7 @@ export default function OnboardingPage() {
             </div>
 
             <form action={handleOnboarding} className="space-y-10">
+              <input type="hidden" name="userId" value={userId || ""} />
               <section className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
