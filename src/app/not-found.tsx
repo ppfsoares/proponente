@@ -7,7 +7,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-surface flex flex-col">
       <Navbar />
       
-      <main className="flex-grow flex items-center justify-center p-6">
+      <main className="grow flex items-center justify-center p-6">
         <div className="text-center">
           <h1 className="text-9xl font-extrabold text-primary font-headline mb-4">404</h1>
           <h2 className="text-3xl font-bold text-on-surface font-headline mb-6">Página não encontrada</h2>

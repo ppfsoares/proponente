@@ -23,7 +23,7 @@ export function OpportunityCard({ grant, matchScore = 85 }: OpportunityCardProps
     : "Sob consulta";
 
   return (
-    <div className="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden flex flex-col justify-between">
+    <div className="group bg-surface-container-lowest rounded-4xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden flex flex-col justify-between">
       <div className="absolute top-0 right-0 p-6">
         <div className={`${matchScore >= 90 ? 'bg-secondary-container text-on-secondary-container animate-pulse' : 'bg-surface-container-high text-on-surface-variant'} px-4 py-2 rounded-full flex items-center gap-2`}>
           <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: matchScore >= 90 ? "'FILL' 1" : "" }}>{matchScore >= 90 ? 'star' : 'psychology'}</span>
@@ -58,7 +58,7 @@ export function OpportunityCard({ grant, matchScore = 85 }: OpportunityCardProps
         <div className="flex items-center gap-3">
           <Link 
             href={`/editais/${grant.id}`}
-            className="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95 font-label uppercase tracking-wide text-center"
+            className="grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95 font-label uppercase tracking-wide text-center"
           >
             Ver Detalhes
           </Link>

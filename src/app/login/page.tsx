@@ -35,7 +35,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-surface flex flex-col">
       <Navbar />
 
-      <main className="flex-grow flex items-center justify-center p-6 bg-surface-container-low">
+      <main className="grow flex items-center justify-center p-6 bg-surface-container-low">
         <div className="max-w-md w-full bg-surface-container-lowest rounded-[40px] overflow-hidden shadow-2xl shadow-black/5 border border-outline-variant/10">
           {/* Header/Banner */}
           <div className="relative h-48 bg-zinc-900">
@@ -44,7 +44,7 @@ export default function LoginPage() {
               className="w-full h-full object-cover opacity-60" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDQCzWM3s7Tyk3YFN84Cgjlt5xgd4nkmfqclr4Xl8GOD4cjH7Kfkq7wdU3bA0KbaSSONmPxKdLS0dxUAhzGzAIFI7Dr447-mGl0NqYc8XyUovtlzxCYJyilepeFJjDC-5dgxbYmnb3plsccE6oA0t5GUtt8rMN_ci6i2ZMqHNGT9kx3Px8N6FEeh9Bc2-xQD9O8S47dnwGSJL3J8BJui7lLrlTJXp7qXSC6REQ4BfPnH80E7H3kmC4w9itGbIUkG6PNJT-XMqxwPT" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest to-transparent"></div>
           </div>
 
           <div className="px-10 pb-12 -mt-12 relative z-10">
@@ -73,16 +73,16 @@ export default function LoginPage() {
               <div className="pt-4 space-y-4">
                 <button 
                   disabled={loading}
-                  className="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm disabled:opacity-70 disabled:hover:scale-100" 
+                  className="w-full py-5 bg-linear-to-r from-primary to-primary-container text-on-primary font-bold rounded-full shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all font-label uppercase tracking-widest text-sm disabled:opacity-70 disabled:hover:scale-100" 
                   type="submit"
                 >
                   {loading ? 'Enviando...' : 'Entrar com Link Mágico'}
                 </button>
                 
                 <div className="flex items-center gap-4 py-2">
-                  <div className="h-px flex-grow bg-outline-variant/20"></div>
+                  <div className="h-px grow bg-outline-variant/20"></div>
                   <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] font-label">Ou</span>
-                  <div className="h-px flex-grow bg-outline-variant/20"></div>
+                  <div className="h-px grow bg-outline-variant/20"></div>
                 </div>
 
                 <button type="button" className="w-full py-4 border-2 border-outline-variant/20 text-on-surface font-bold rounded-full hover:bg-surface-container-low transition-all flex items-center justify-center gap-3 font-label uppercase tracking-widest text-xs">

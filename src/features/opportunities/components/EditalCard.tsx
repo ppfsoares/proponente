@@ -16,7 +16,7 @@ interface EditalProps {
 
 export function EditalCard({ edital }: EditalProps) {
   return (
-    <div className="group bg-white rounded-[2rem] p-8 transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-black/[0.03] flex flex-col justify-between">
+    <div className="group bg-white rounded-4xl p-8 transition-all hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-black/3 flex flex-col justify-between">
       <div>
         <div className="flex justify-between items-start gap-4 mb-6">
           <span className="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface/50 text-[10px] font-black uppercase tracking-widest">

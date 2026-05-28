@@ -7,7 +7,7 @@ export default function OnboardingPage() {
     <div className="min-h-screen bg-surface flex flex-col">
       <Navbar />
 
-      <main className="flex-grow flex items-center justify-center p-6 md:p-12 bg-surface-container-low">
+      <main className="grow flex items-center justify-center p-6 md:p-12 bg-surface-container-low">
         <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Stepper Sidebar */}
           <div className="lg:col-span-4 space-y-8">
@@ -53,7 +53,7 @@ export default function OnboardingPage() {
                 <span className="text-sm font-bold text-on-surface-variant font-headline">33% concluído</span>
               </div>
               <div className="w-full h-3 bg-surface-container rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-primary to-primary-container w-1/3 rounded-full transition-all duration-700 ease-out"></div>
+                <div className="h-full bg-linear-to-r from-primary to-primary-container w-1/3 rounded-full transition-all duration-700 ease-out"></div>
               </div>
             </div>
 
@@ -138,7 +138,7 @@ export default function OnboardingPage() {
 
               <div className="flex items-center justify-between pt-12 border-t border-outline-variant/10">
                 <button className="px-8 py-4 text-on-surface-variant font-bold hover:text-on-surface transition-all font-label uppercase tracking-widest text-xs" type="button">Pular por enquanto</button>
-                <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-3 font-label uppercase tracking-widest text-sm" type="submit">
+                <button className="bg-linear-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-3 font-label uppercase tracking-widest text-sm" type="submit">
                   Finalizar Cadastro
                   <span className="material-symbols-outlined font-bold text-xl">check</span>
                 </button>

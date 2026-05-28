@@ -75,7 +75,7 @@ export default function PlansPage() {
                   <p className="text-xs font-bold text-on-surface-variant font-label uppercase tracking-widest">{plan.sub}</p>
                 </div>
                 
-                <ul className="space-y-5 mb-12 flex-grow">
+                <ul className="space-y-5 mb-12 grow">
                   {plan.features.map(f => (
                     <li key={f} className="flex items-start gap-3">
                       <span className="material-symbols-outlined text-secondary text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
@@ -88,7 +88,7 @@ export default function PlansPage() {
                   <div className="text-center py-4 bg-surface-container-low rounded-2xl">
                     <span className="text-xs font-bold text-on-surface-variant uppercase tracking-widest font-label">Em Breve</span>
                   </div>
-                  <Link href="/cadastro" className={`block text-center w-full py-5 px-6 rounded-full font-bold text-sm shadow-md transition-all active:scale-95 font-label uppercase tracking-widest ${plan.featured ? 'bg-gradient-to-r from-primary to-primary-container text-on-primary' : 'bg-surface-container-highest text-on-surface'}`}>
+                  <Link href="/cadastro" className={`block text-center w-full py-5 px-6 rounded-full font-bold text-sm shadow-md transition-all active:scale-95 font-label uppercase tracking-widest ${plan.featured ? 'bg-linear-to-r from-primary to-primary-container text-on-primary' : 'bg-surface-container-highest text-on-surface'}`}>
                     Me Avise no Lançamento
                   </Link>
                 </div>
@@ -106,7 +106,7 @@ export default function PlansPage() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUG0Mm5ikj4w9oGV7QaRw_qevuzTvyl1d5DKfIGNUQ8rRHJZ3qLt_bQIvepKIF_Bq0O1r0sb2vnhHENsRFs8mQf2vAuLpPYG1f1xxRHW7Oahnb8TW1SIwbZq3LmQ0Th0RtJw0jBjKbsNygJ2DXOkKxpysexhZOgmw-ak3B0rTtIHrqE2zNdV_9mqxY0qs5itATRQneG1tk87ZV00ZIArvIH_tsmg_Fbkdq13-5ll3W84PEg73m6UrW4QpmLBU9yAfevYtYJG1wP_-O" 
                 alt="Nordeste Culture"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-primary/60 to-transparent"></div>
             </div>
             <div className="w-full lg:w-1/2 p-16 lg:p-24">
               <h2 className="font-headline text-5xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tighter italic">Cultura que transborda o <span className="text-primary not-italic">Nordeste</span></h2>

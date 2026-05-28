@@ -93,7 +93,7 @@ export default async function FeedPage() {
               ))}
 
               {/* Match CTA */}
-              <div className="group bg-gradient-to-br from-[#FF5D4E] to-[#b61424] rounded-[2rem] p-8 transition-all duration-300 flex flex-col justify-between text-white relative overflow-hidden md:col-span-2">
+              <div className="group bg-linear-to-br from-[#FF5D4E] to-primary rounded-4xl p-8 transition-all duration-300 flex flex-col justify-between text-white relative overflow-hidden md:col-span-2">
                 <div className="absolute -bottom-10 -right-10 opacity-20 transform rotate-12">
                   <span className="material-symbols-outlined text-[160px]" style={{ fontVariationSettings: "'FILL' 1" }}>auto_awesome</span>
                 </div>

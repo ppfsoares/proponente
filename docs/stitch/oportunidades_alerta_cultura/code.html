@@ -90,7 +90,7 @@
 <nav class="docked full-width top-0 sticky z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl no-border bg-surface-container-low transition-all duration-300">
 <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
 <div class="flex items-center gap-8">
-<span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF5D4E] to-[#ff7671] bg-clip-text text-transparent">Alerta Cultura</span>
+<span class="text-xl font-extrabold tracking-tight bg-linear-to-r from-[#FF5D4E] to-primary-container bg-clip-text text-transparent">Alerta Cultura</span>
 <div class="hidden md:flex items-center gap-6">
 <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Descobrir</a>
 <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-orange-500 transition-all duration-300" href="#">Alertas</a>
@@ -102,14 +102,14 @@
 <span class="material-symbols-outlined text-outline text-sm">search</span>
 <input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Buscar editais..." type="text"/>
 </div>
-<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-150">
+<button class="bg-linear-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all duration-150">
                     Entrar
                 </button>
 </div>
 </div>
 </nav>
 <!-- Main Content Canvas -->
-<main class="flex-grow max-w-7xl mx-auto w-full px-6 py-10">
+<main class="grow max-w-7xl mx-auto w-full px-6 py-10">
 <!-- Header Section -->
 <header class="mb-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -144,21 +144,21 @@
 <div class="space-y-3">
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input checked="" class="hidden" type="checkbox"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Bahia</span>
 </label>
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input class="hidden" type="checkbox"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Pernambuco</span>
 </label>
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input class="hidden" type="checkbox"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Ceará</span>
@@ -171,21 +171,21 @@
 <div class="space-y-3">
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input checked="" class="hidden" name="type" type="radio"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Todos</span>
 </label>
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input class="hidden" name="type" type="radio"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Lei Paulo Gustavo</span>
 </label>
 <label class="flex items-center gap-3 group cursor-pointer">
 <div class="w-5 h-5 rounded-full border-2 border-outline-variant group-hover:border-primary flex items-center justify-center transition-colors">
-<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-[:checked]:opacity-100"></div>
+<div class="w-2.5 h-2.5 bg-primary rounded-full opacity-0 group-has-checked:opacity-100"></div>
 </div>
 <input class="hidden" name="type" type="radio"/>
 <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Aldir Blanc II</span>
@@ -201,7 +201,7 @@
 <section class="lg:col-span-9">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <!-- Opportunity Card 1 (Premium/High Match) -->
-<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="group bg-surface-container-lowest rounded-4xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
 <div class="absolute top-0 right-0 p-6">
 <div class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full flex items-center gap-2 animate-pulse">
 <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -224,7 +224,7 @@
 </div>
 </div>
 <div class="flex items-center gap-3">
-<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+<button class="grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
                                 Ver Detalhes
                             </button>
 <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-outline hover:text-primary hover:bg-primary/10 transition-all">
@@ -233,7 +233,7 @@
 </div>
 </div>
 <!-- Opportunity Card 2 -->
-<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="group bg-surface-container-lowest rounded-4xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
 <div class="absolute top-0 right-0 p-6">
 <div class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full flex items-center gap-2">
 <span class="material-symbols-outlined text-[18px]">psychology</span>
@@ -256,7 +256,7 @@
 </div>
 </div>
 <div class="flex items-center gap-3">
-<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+<button class="grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
                                 Ver Detalhes
                             </button>
 <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary transition-all">
@@ -265,7 +265,7 @@
 </div>
 </div>
 <!-- Opportunity Card 3 -->
-<div class="group bg-surface-container-lowest rounded-[2rem] p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
+<div class="group bg-surface-container-lowest rounded-4xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-primary/10 relative overflow-hidden">
 <div class="absolute top-0 right-0 p-6">
 <div class="bg-tertiary-container text-on-tertiary-container px-4 py-2 rounded-full flex items-center gap-2">
 <span class="material-symbols-outlined text-[18px]">alarm</span>
@@ -288,7 +288,7 @@
 </div>
 </div>
 <div class="flex items-center gap-3">
-<button class="flex-grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
+<button class="grow bg-on-background text-surface-container-lowest py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all active:scale-95">
                                 Ver Detalhes
                             </button>
 <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-surface-container-low text-outline hover:text-primary hover:bg-primary/10 transition-all">
@@ -297,7 +297,7 @@
 </div>
 </div>
 <!-- CTA Bento Card -->
-<div class="group bg-gradient-to-br from-[#FF5D4E] to-[#b61424] rounded-[2rem] p-8 transition-all duration-300 flex flex-col justify-between text-white relative overflow-hidden">
+<div class="group bg-linear-to-br from-[#FF5D4E] to-primary rounded-4xl p-8 transition-all duration-300 flex flex-col justify-between text-white relative overflow-hidden">
 <div class="absolute -bottom-10 -right-10 opacity-20 transform rotate-12">
 <span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
 </div>

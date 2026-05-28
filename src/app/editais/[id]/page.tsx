@@ -133,7 +133,7 @@ export default async function EditalDetailsPage({ params }: { params: Promise<{ 
                     href={grant.externalUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-full font-bold hover:scale-[0.98] transition-transform shadow-lg shadow-primary/20 font-label uppercase tracking-wider"
+                    className="w-full flex items-center justify-center gap-3 bg-linear-to-r from-primary to-primary-container text-on-primary py-4 rounded-full font-bold hover:scale-[0.98] transition-transform shadow-lg shadow-primary/20 font-label uppercase tracking-wider"
                   >
                     <span className="material-symbols-outlined">open_in_new</span>
                     Acessar Edital Oficial

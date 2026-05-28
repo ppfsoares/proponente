@@ -66,7 +66,7 @@ export default async function Home() {
             </div>
 
             <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-              <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="relative w-full aspect-square rounded-4xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
                 <img className="w-full h-full object-cover" src="/images/nordeste_hero.png" alt="Nordeste Cultura" />
               </div>
               <div className="absolute -bottom-8 -left-8 glass-card p-6 rounded-3xl shadow-xl z-20 max-w-[240px]">
@@ -91,7 +91,7 @@ export default async function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between relative overflow-hidden group border border-outline-variant/10">
+              <div className="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-8 rounded-4xl flex flex-col justify-between relative overflow-hidden group border border-outline-variant/10">
                 <div className="z-10">
                   <div className="w-14 h-14 rounded-2xl primary-gradient flex items-center justify-center text-white mb-6">
                     <span className="material-symbols-outlined text-3xl">hub</span>
@@ -104,17 +104,17 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="md:col-span-2 bg-surface-container-lowest p-8 rounded-[2rem] flex items-center gap-6 border border-outline-variant/10">
+              <div className="md:col-span-2 bg-surface-container-lowest p-8 rounded-4xl flex items-center gap-6 border border-outline-variant/10">
                 <div className="flex-1">
                   <h4 className="text-xl font-bold mb-2 font-headline">9 Estados Cobertos</h4>
                   <p className="text-sm text-on-surface-variant font-body">Do Maranhão à Bahia, mapeamos todas as secretarias de cultura.</p>
                 </div>
-                <div className="w-24 h-24 rounded-2xl bg-secondary-container flex items-center justify-center flex-shrink-0">
+                <div className="w-24 h-24 rounded-2xl bg-secondary-container flex items-center justify-center shrink-0">
                   <span className="material-symbols-outlined text-4xl text-on-secondary-container">map</span>
                 </div>
               </div>
 
-              <div className="md:col-span-1 bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between border border-outline-variant/10">
+              <div className="md:col-span-1 bg-surface-container-lowest p-8 rounded-4xl flex flex-col justify-between border border-outline-variant/10">
                 <span className="material-symbols-outlined text-primary text-4xl mb-4">notifications_active</span>
                 <div>
                   <h4 className="font-bold mb-1 font-headline">Alertas IA</h4>
@@ -122,7 +122,7 @@ export default async function Home() {
                 </div>
               </div>
 
-              <div className="md:col-span-1 primary-gradient p-8 rounded-[2rem] flex flex-col justify-between text-white">
+              <div className="md:col-span-1 primary-gradient p-8 rounded-4xl flex flex-col justify-between text-white">
                 <span className="material-symbols-outlined text-4xl mb-4">groups</span>
                 <div>
                   <h4 className="font-bold mb-1 font-headline">Comunidade</h4>

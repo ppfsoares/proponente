@@ -16,7 +16,7 @@ export function EditalViewer({ id }: { id: string }) {
           Lei Paulo Gustavo <br /> 
           <span className="text-primary italic">Audiovisual Pernambuco</span>
         </h1>
-        <div className="flex gap-8 border-b border-black/[0.05] pb-10">
+        <div className="flex gap-8 border-b border-black/5 pb-10">
           <StatBox label="Valor Máximo" value="R$ 50.000" />
           <StatBox label="Prazo Final" value="15 de Maio, 2026" />
           <StatBox label="Estado" value="Pernambuco" />
@@ -74,7 +74,7 @@ export function EditalViewer({ id }: { id: string }) {
 
         {/* Sidebar / Checklist */}
         <aside className="space-y-8">
-          <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+          <div className="bg-white rounded-4xl p-8 shadow-sm">
             <h3 className="text-xl font-display font-bold text-on-surface mb-6 flex items-center gap-3">
               <FileText className="w-5 h-5 text-secondary" />
               Checklist de Documentos
@@ -93,7 +93,7 @@ export function EditalViewer({ id }: { id: string }) {
             </button>
           </div>
 
-          <div className="bg-surface-container-low rounded-[2rem] p-8">
+          <div className="bg-surface-container-low rounded-4xl p-8">
             <h4 className="text-lg font-display font-bold text-on-surface mb-4 flex items-center gap-3">
               <HelpCircle className="w-5 h-5 text-on-surface/30" />
               Dúvidas?
@@ -114,7 +114,7 @@ export function EditalViewer({ id }: { id: string }) {
 function StatBox({ label, value }: { label: string, value: string }) {
   return (
     <div>
-      <div className="text-[10px] font-bold text-on-surface/30 uppercase tracking-[0.1em] mb-1">{label}</div>
+      <div className="text-[10px] font-bold text-on-surface/30 uppercase tracking-widest mb-1">{label}</div>
       <div className="text-xl font-display font-black text-on-surface">{value}</div>
     </div>
   );

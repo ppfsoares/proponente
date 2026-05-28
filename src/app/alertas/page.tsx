@@ -25,7 +25,7 @@ export default function MyAlertsPage() {
     <div className="min-h-screen bg-surface">
       <Navbar />
 
-      <main className="flex-grow w-full max-w-7xl mx-auto px-6 py-24">
+      <main className="grow w-full max-w-7xl mx-auto px-6 py-24">
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-on-background mb-4 font-headline">Meus Alertas</h1>
           <p className="text-on-surface-variant text-lg max-w-2xl font-body">Personalize como e quando você deseja ser notificado sobre novos editais e oportunidades culturais no Nordeste.</p>

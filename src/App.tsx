@@ -203,7 +203,7 @@ const LandingPage = () => {
             </p>
 
             <div className="max-w-xl mx-auto relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-linear-to-r from-primary to-primary-container rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative flex items-center bg-white rounded-2xl p-2 shadow-xl">
                 <Search className="ml-4 text-outline" size={20} />
                 <input 
@@ -646,7 +646,7 @@ const OnboardingPage = () => {
               <button 
                 disabled={!formData.state}
                 onClick={handleNext}
-                className="flex-[2] py-4 bg-primary text-white rounded-2xl font-bold disabled:opacity-50"
+                className="flex-2 py-4 bg-primary text-white rounded-2xl font-bold disabled:opacity-50"
               >
                 Próximo
               </button>
@@ -685,7 +685,7 @@ const OnboardingPage = () => {
               <button 
                 disabled={formData.areas.length === 0}
                 onClick={handleSubmit}
-                className="flex-[2] py-4 bg-primary text-white rounded-2xl font-bold disabled:opacity-50"
+                className="flex-2 py-4 bg-primary text-white rounded-2xl font-bold disabled:opacity-50"
               >
                 Finalizar Configuração
               </button>

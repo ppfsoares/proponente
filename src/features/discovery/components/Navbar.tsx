@@ -17,7 +17,7 @@ export const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full glass bg-surface-container-low transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-8">
-          <Link href="/" className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-2xl font-black tracking-tighter text-transparent font-headline">
+          <Link href="/" className="bg-linear-to-r from-primary to-primary-container bg-clip-text text-2xl font-black tracking-tighter text-transparent font-headline">
             SOMA ALERTA
           </Link>
           
@@ -39,7 +39,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link 
             href="/login"
-            className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-2.5 rounded-full font-bold hover:scale-95 transition-transform duration-150 shadow-md shadow-primary/20 text-sm font-label uppercase tracking-wider"
+            className="bg-linear-to-r from-primary to-primary-container text-on-primary px-8 py-2.5 rounded-full font-bold hover:scale-95 transition-transform duration-150 shadow-md shadow-primary/20 text-sm font-label uppercase tracking-wider"
           >
             Entrar
           </Link>
